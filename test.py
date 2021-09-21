@@ -1,12 +1,9 @@
+import sys
 from game import *
-from ships import *
-from colony import *
-from random_player import *
-from custom_player import *
+from player import *
+sys.path.append('strategies')
+from outside_strategy import *
 
-players = [CustomPlayer(), CustomPlayer()]
+players = [Player(OutsideStrategy()), Player(OutsideStrategy())]
 game = Game(players)
-game.complete_movement_phase()
-game.complete_movement_phase()
-game.complete_movement_phase()
-game.complete_combat_phase()
+game.run_to_completion()

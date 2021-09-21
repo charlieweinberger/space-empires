@@ -16,7 +16,7 @@ class Game:
         self.board = {(x, y): [] for x in range(1, self.board_len + 1) for y in range(1, self.board_len + 1)}
         self.turn = 1
         self.winner = None
-        self.combat_coords = [] #
+        self.combat_coords = []
 
         self.start_game()
 
@@ -60,16 +60,16 @@ class Game:
         
         self.set_player_numbers()
         self.logger.clear_log()
-        self.set_stuff()
+        self.set_ships()
 
     def get_all_ships_on_space(self, coords):
-        return filter(lambda x: isinstance(x, Ship), self.board[coords])
+        return list(filter(lambda x: isinstance(x, Ship), self.board[coords]))
     
     def get_alive_ships(self, ship_list):
-        return filter(lambda x: x.hp > 0, ship_list)
+        return list(filter(lambda x: x.hp > 0, ship_list))
 
     def get_opponent_ships(self, ship, combat_order):
-        return filter(lambda x: x.player_num != ship.player_num, self.get_alive_ships(combat_order))
+        return list(filter(lambda x: x.player_num != ship.player_num, self.get_alive_ships(combat_order)))
 
     def all_same_team(self, ship_list):
         return len(set([ship.player_num for ship in ship_list])) == 1
@@ -82,8 +82,19 @@ class Game:
         ship.coords = new_coords
         self.board[ship.coords].append(ship)
 
+    def delete_ship(self, ship):
+        self.board[ship.coords].remove(ship)
+        self.players[ship.player_num].ships.remove(ship)
+        
+    def hit(self, attacker, defender):
+        role = attacker.atk - defender.df
+        threshold = attacker.atk - defender.df
+        return role <= threshold
+
     def complete_movement_phase(self):
 
+        self.logger.write('\nBEGINNING OF TURN {} MOVEMENT PHASE\n\n'.format(self.turn))
+        
         for player in self.players.values():
             for ship in player.ships:
 
@@ -92,40 +103,62 @@ class Game:
 
                 current_coords = ship.coords
                 in_bounds_translations = self.get_in_bounds_translations(current_coords)
-                dx, dy = player.choose_translation(self.board, in_bounds_translations, ship)
-                x, y = current_coords
-                new_coords = (x + dx, y + dy)
+                translation = player.choose_translation(self.board, in_bounds_translations, ship)
+                new_coords = (current_coords[0] + translation[0], current_coords[1] + translation[1])
+
+                if new_coords not in self.board.keys():
+                    self.logger.write('\tPlayer {} {} tried to make an invalid move: {}\n'.format(ship.player_num, ship.name, translation))
+                    new_coords = current_coords
+
                 self.update_ship_coords(ship, new_coords)
 
                 if self.there_are_opponent_ships(ship) and ship.coords not in self.combat_coords:
                     self.combat_coords.append(ship.coords)
+                
+                self.logger.write('\tPlayer {} {}: {} -> {}\n'.format(ship.player_num, ship.name, current_coords, ship.coords))
+        
+        self.print_board()
+        self.logger.write('\nEND OF TURN {} MOVEMENT PHASE\n'.format(self.turn))
     
-    ############################################################################################################
-
     def complete_combat_phase(self):
         
+        self.logger.write('\nBEGINNING OF TURN {} COMBAT PHASE\n'.format(self.turn))
+
         if self.winner != None: return
         
         coords_to_delete = []
         
         for coords in self.combat_coords:
             
+            self.logger.write('\n\t Combat at: {}\n'.format(coords))
+
             combat_order = sorted(self.get_all_ships_on_space(coords), key=lambda x: x.cls)
             for ship in self.get_alive_ships(combat_order):
             
                 player = self.players[ship.player_num]
                 opponent_ships = self.get_opponent_ships(ship, combat_order) 
-                
+
                 if len(opponent_ships) == 0: continue
                 
                 target = player.choose_target(opponent_ships)
-                target_player = self.players[target.player_num]
                 
+                self.logger.write('\n\t\tAttacker: Player {} {}\n'.format(ship.player_num, ship.name))
+                self.logger.write('\t\tDefender: Player {} {}\n'.format(target.player_num, target.name))
+
                 if self.hit(ship, target):
                     
-                    if target.hp <= 1:
-                        self.board[target.coords].remove(target)
-                        target_player.ships.remove(target)
+                    self.logger.write('\t\tHit!\n')
+                    
+                    target.hp -= 1
+                    
+                    self.logger.write('\n\t\tPlayer {} {} dealt 1 dmg to Player {} {}\n'.format(ship.player_num, ship.name, target.player_num, target.name))
+
+                    if target.hp <= 0:
+                        self.delete_ship(target)
+                        self.logger.write('\t\tPlayer {} {} was destroyed\n'.format(target.player_num, target.name))
+
+                else:
+                    self.logger.write('\t\t(Miss)\n')
 
             if self.all_same_team(self.get_alive_ships(combat_order)):
                 coords_to_delete.append(coords)
@@ -133,36 +166,40 @@ class Game:
         for coords in coords_to_delete:
             self.combat_coords.remove(coords)
 
-    ############################################################################################################
+        self.logger.write('\nEND OF TURN {} COMBAT PHASE\n'.format(self.turn))
 
     def run_to_completion(self):
         while self.winner == None:        
             self.complete_movement_phase()
             self.complete_combat_phase()
             self.winner = self.check_for_winner()
+            print(self.winner)
             self.turn += 1
 
     def check_for_winner(self):
-        
-        p1, p2 = self.players
-        p1_wins = any(ship.coords == p1.home_colony.coords for ship in p1.ships)
-        p2_wins = any(ship.coords == p2.home_colony.coords for ship in p2.ships)
+
+        p1, p2 = list(self.players.values())
+        p1_wins = any(ship.coords == p2.home_colony.coords for ship in p1.ships)
+        p2_wins = any(ship.coords == p1.home_colony.coords for ship in p2.ships)
 
         if p1_wins and p2_wins:
+            self.logger.write('\nTIE GAME')
             return 'Tie' 
         elif p1_wins:
+            self.logger.write('\nWINNER: PLAYER 1')
             return 1
         elif p2_wins:
+            self.logger.write('\nWINNER: PLAYER 2')
             return 2
         return None
     
     def print_board(self):
         
         print('')
-        for y in range(self.board_len):
+        for y in range(1, self.board_len + 1):
             
             row_string = ''
-            for x in range(self.board_len):
+            for x in range(1, self.board_len + 1):
                 coord = (x, y)
 
                 if self.board[coord] == []:

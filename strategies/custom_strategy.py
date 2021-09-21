@@ -12,10 +12,11 @@ class CustomStrategy:
     def find_home_colonies(self, board):
         board_len = math.sqrt(len(board))
         coords = []
-        for x_y in [(x, y) for x in range(board_len) for y in range(board_len)]:
-            for thing in board[x_y]:
-                if isinstance(thing, HomeColony) and thing.player_num != self.player.player_num:
-                    coords.append(x_y)
+        for y in range(board_len):
+            for x in range(board_len):
+                for thing in board[(x, y)]:
+                    if isinstance(thing, HomeColony) and thing.player_num != self.player.player_num:
+                        coords.append((x, y))
         return coords
 
     def find_min_choice(self, choices, coord):
