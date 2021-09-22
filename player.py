@@ -12,8 +12,8 @@ class Player:
         map_to = {None: None, 1: 2, 2: 1}
         return map_to[self.player_num]
 
-    def choose_translation(self, board, choices, ship):
-        return self.strategy.choose_translation(board, choices, ship)
+    def choose_translation(self, players, board, choices, ship):
+        return self.strategy.choose_translation(players, board, choices, ship)
 
     def choose_target(self, opponent_ships):
         return self.strategy.choose_target(opponent_ships)

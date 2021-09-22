@@ -61,9 +61,6 @@ class Game:
         self.set_player_numbers()
         self.logger.clear_log()
         self.set_ships()
-
-    def get_all_ships_on_space(self, coords):
-        return list(filter(lambda x: isinstance(x, Ship), self.board[coords]))
     
     def get_alive_ships(self, ship_list):
         return list(filter(lambda x: x.hp > 0, ship_list))
@@ -75,7 +72,7 @@ class Game:
         return len(set([ship.player_num for ship in ship_list])) == 1
 
     def there_are_opponent_ships(self, input_ship):
-        return any(input_ship.player_num != ship.player_num for ship in self.get_all_ships_on_space(input_ship.coords))
+        return any(input_ship.player_num != ship.player_num for ship in self.board[input_ship.coords])
     
     def update_ship_coords(self, ship, new_coords):
         self.board[ship.coords].remove(ship)
@@ -103,7 +100,7 @@ class Game:
 
                 current_coords = ship.coords
                 in_bounds_translations = self.get_in_bounds_translations(current_coords)
-                translation = player.choose_translation(self.board, in_bounds_translations, ship)
+                translation = player.choose_translation(self.players, self.board, in_bounds_translations, ship)
                 new_coords = (current_coords[0] + translation[0], current_coords[1] + translation[1])
 
                 if new_coords not in self.board.keys():
@@ -132,7 +129,7 @@ class Game:
             
             self.logger.write('\n\t Combat at: {}\n'.format(coords))
 
-            combat_order = sorted(self.get_all_ships_on_space(coords), key=lambda x: x.cls)
+            combat_order = sorted(self.board[coords], key=lambda x: x.cls)
             for ship in self.get_alive_ships(combat_order):
             
                 player = self.players[ship.player_num]
@@ -141,7 +138,7 @@ class Game:
                 if len(opponent_ships) == 0: continue
                 
                 target = player.choose_target(opponent_ships)
-                
+
                 self.logger.write('\n\t\tAttacker: Player {} {}\n'.format(ship.player_num, ship.name))
                 self.logger.write('\t\tDefender: Player {} {}\n'.format(target.player_num, target.name))
 
@@ -173,8 +170,8 @@ class Game:
             self.complete_movement_phase()
             self.complete_combat_phase()
             self.winner = self.check_for_winner()
-            print(self.winner)
             self.turn += 1
+        print(self.winner)
 
     def check_for_winner(self):
 
