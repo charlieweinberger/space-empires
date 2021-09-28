@@ -1,13 +1,12 @@
 import random, math
-from ships import *
-from colony import *
 
-class MoveOffBoard:
-    def __init__(self):
+class SameMove:
+    def __init__(self, move):
         self.player = None
+        self.move = move
 
-    def choose_translation(self, board, choices, ship):
-        return (0, -1)
+    def choose_translation(self, players, board, choices, ship):
+        return self.move
         
     def choose_target(self, opponent_ships):
         random_idx = math.floor(len(opponent_ships) * random.random())

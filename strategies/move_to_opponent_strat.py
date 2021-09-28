@@ -1,6 +1,4 @@
 import random, math
-from ships import *
-from colony import *
 
 class MoveToOpponent:
     def __init__(self):
@@ -25,8 +23,8 @@ class MoveToOpponent:
             return min_choice
 
     def choose_translation(self, players, board, choices, ship):
-        home_colony_coords = players[self.player.get_opponent_player_number()].home_colony.coords
-        return self.min_distance_translation(choices, ship, home_colony_coords)
+        opponent_home_colony_coords = players[self.player.get_opponent_player_number()].home_colony.coords
+        return self.min_distance_translation(choices, ship, opponent_home_colony_coords)
         
     def choose_target(self, opponent_ships):
         random_idx = math.floor(len(opponent_ships) * random.random())

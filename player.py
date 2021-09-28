@@ -12,6 +12,9 @@ class Player:
         map_to = {None: None, 1: 2, 2: 1}
         return map_to[self.player_num]
 
+    def get_ships_by_type(self, type_name):
+        return list(filter(lambda x: x.name == type_name, self.ships))
+
     def choose_translation(self, players, board, choices, ship):
         return self.strategy.choose_translation(players, board, choices, ship)
 

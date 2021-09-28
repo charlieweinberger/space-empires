@@ -7,12 +7,12 @@ BEGINNING OF TURN 1 MOVEMENT PHASE
 	Player 1 Battlecruiser: (4, 1) -> (4, 2)
 	Player 1 Battlecruiser: (4, 1) -> (4, 2)
 	Player 1 Battlecruiser: (4, 1) -> (4, 2)
-	Player 2 Scout: (4, 7) -> (4, 6)
-	Player 2 Scout: (4, 7) -> (4, 6)
-	Player 2 Scout: (4, 7) -> (4, 6)
-	Player 2 Battlecruiser: (4, 7) -> (4, 6)
-	Player 2 Battlecruiser: (4, 7) -> (4, 6)
-	Player 2 Battlecruiser: (4, 7) -> (4, 6)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
 
 END OF TURN 1 MOVEMENT PHASE
 
@@ -28,12 +28,12 @@ BEGINNING OF TURN 2 MOVEMENT PHASE
 	Player 1 Battlecruiser: (4, 2) -> (4, 3)
 	Player 1 Battlecruiser: (4, 2) -> (4, 3)
 	Player 1 Battlecruiser: (4, 2) -> (4, 3)
-	Player 2 Scout: (4, 6) -> (4, 5)
-	Player 2 Scout: (4, 6) -> (4, 5)
-	Player 2 Scout: (4, 6) -> (4, 5)
-	Player 2 Battlecruiser: (4, 6) -> (4, 5)
-	Player 2 Battlecruiser: (4, 6) -> (4, 5)
-	Player 2 Battlecruiser: (4, 6) -> (4, 5)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
 
 END OF TURN 2 MOVEMENT PHASE
 
@@ -49,148 +49,54 @@ BEGINNING OF TURN 3 MOVEMENT PHASE
 	Player 1 Battlecruiser: (4, 3) -> (4, 4)
 	Player 1 Battlecruiser: (4, 3) -> (4, 4)
 	Player 1 Battlecruiser: (4, 3) -> (4, 4)
-	Player 2 Scout: (4, 5) -> (4, 4)
-	Player 2 Scout: (4, 5) -> (4, 4)
-	Player 2 Scout: (4, 5) -> (4, 4)
-	Player 2 Battlecruiser: (4, 5) -> (4, 4)
-	Player 2 Battlecruiser: (4, 5) -> (4, 4)
-	Player 2 Battlecruiser: (4, 5) -> (4, 4)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
 
 END OF TURN 3 MOVEMENT PHASE
 
 BEGINNING OF TURN 3 COMBAT PHASE
 
-	 Combat at: (4, 4)
-
-		Attacker: Player 1 Battlecruiser
-		Defender: Player 2 Scout
-		Hit!
-
-		Player 1 Battlecruiser dealt 1 dmg to Player 2 Scout
-		Player 2 Scout was destroyed
-
-		Attacker: Player 1 Battlecruiser
-		Defender: Player 2 Battlecruiser
-		Hit!
-
-		Player 1 Battlecruiser dealt 1 dmg to Player 2 Battlecruiser
-
-		Attacker: Player 1 Battlecruiser
-		Defender: Player 2 Battlecruiser
-		Hit!
-
-		Player 1 Battlecruiser dealt 1 dmg to Player 2 Battlecruiser
-
-		Attacker: Player 2 Battlecruiser
-		Defender: Player 1 Scout
-		Hit!
-
-		Player 2 Battlecruiser dealt 1 dmg to Player 1 Scout
-		Player 1 Scout was destroyed
-
-		Attacker: Player 2 Battlecruiser
-		Defender: Player 1 Scout
-		Hit!
-
-		Player 2 Battlecruiser dealt 1 dmg to Player 1 Scout
-		Player 1 Scout was destroyed
-
-		Attacker: Player 2 Battlecruiser
-		Defender: Player 1 Battlecruiser
-		Hit!
-
-		Player 2 Battlecruiser dealt 1 dmg to Player 1 Battlecruiser
-
-		Attacker: Player 1 Scout
-		Defender: Player 2 Scout
-		Hit!
-
-		Player 1 Scout dealt 1 dmg to Player 2 Scout
-		Player 2 Scout was destroyed
-
-		Attacker: Player 1 Scout
-		Defender: Player 2 Battlecruiser
-		Hit!
-
-		Player 1 Scout dealt 1 dmg to Player 2 Battlecruiser
-
-		Attacker: Player 1 Scout
-		Defender: Player 2 Battlecruiser
-		Hit!
-
-		Player 1 Scout dealt 1 dmg to Player 2 Battlecruiser
-		Player 2 Battlecruiser was destroyed
-
-		Attacker: Player 2 Scout
-		Defender: Player 1 Battlecruiser
-		Hit!
-
-		Player 2 Scout dealt 1 dmg to Player 1 Battlecruiser
-
-		Attacker: Player 2 Scout
-		Defender: Player 1 Battlecruiser
-		Hit!
-
-		Player 2 Scout dealt 1 dmg to Player 1 Battlecruiser
-		Player 1 Battlecruiser was destroyed
-
-		Attacker: Player 2 Scout
-		Defender: Player 1 Scout
-		Hit!
-
-		Player 2 Scout dealt 1 dmg to Player 1 Scout
-		Player 1 Scout was destroyed
-
 END OF TURN 3 COMBAT PHASE
 
 BEGINNING OF TURN 4 MOVEMENT PHASE
 
+	Player 1 Scout: (4, 4) -> (4, 5)
+	Player 1 Scout: (4, 4) -> (4, 5)
+	Player 1 Scout: (4, 4) -> (4, 5)
+	Player 1 Battlecruiser: (4, 4) -> (4, 5)
+	Player 1 Battlecruiser: (4, 4) -> (4, 5)
+	Player 1 Battlecruiser: (4, 4) -> (4, 5)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
 
 END OF TURN 4 MOVEMENT PHASE
 
 BEGINNING OF TURN 4 COMBAT PHASE
 
-	 Combat at: (4, 4)
-
-		Attacker: Player 1 Battlecruiser
-		Defender: Player 2 Battlecruiser
-		Hit!
-
-		Player 1 Battlecruiser dealt 1 dmg to Player 2 Battlecruiser
-		Player 2 Battlecruiser was destroyed
-
-		Attacker: Player 1 Battlecruiser
-		Defender: Player 2 Scout
-		Hit!
-
-		Player 1 Battlecruiser dealt 1 dmg to Player 2 Scout
-		Player 2 Scout was destroyed
-
-		Attacker: Player 2 Battlecruiser
-		Defender: Player 1 Battlecruiser
-		Hit!
-
-		Player 2 Battlecruiser dealt 1 dmg to Player 1 Battlecruiser
-		Player 1 Battlecruiser was destroyed
-
-		Attacker: Player 2 Battlecruiser
-		Defender: Player 1 Battlecruiser
-		Hit!
-
-		Player 2 Battlecruiser dealt 1 dmg to Player 1 Battlecruiser
-
-		Attacker: Player 2 Scout
-		Defender: Player 1 Battlecruiser
-		Hit!
-
-		Player 2 Scout dealt 1 dmg to Player 1 Battlecruiser
-		Player 1 Battlecruiser was destroyed
-
 END OF TURN 4 COMBAT PHASE
 
 BEGINNING OF TURN 5 MOVEMENT PHASE
 
-	Player 2 Battlecruiser: (4, 4) -> (4, 3)
+	Player 1 Scout: (4, 5) -> (4, 6)
+	Player 1 Scout: (4, 5) -> (4, 6)
+	Player 1 Scout: (4, 5) -> (4, 6)
+	Player 1 Battlecruiser: (4, 5) -> (4, 6)
+	Player 1 Battlecruiser: (4, 5) -> (4, 6)
+	Player 1 Battlecruiser: (4, 5) -> (4, 6)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Scout: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
+	Player 2 Battlecruiser: (4, 7) -> (4, 7)
 
 END OF TURN 5 MOVEMENT PHASE
 
@@ -200,22 +106,11 @@ END OF TURN 5 COMBAT PHASE
 
 BEGINNING OF TURN 6 MOVEMENT PHASE
 
-	Player 2 Battlecruiser: (4, 3) -> (4, 2)
+	Player 1 Scout: (4, 6) -> (4, 7)
+	Player 1 Scout: (4, 6) -> (4, 7)
+	Player 1 Scout: (4, 6) -> (4, 7)
+	Player 1 Battlecruiser: (4, 6) -> (4, 7)
+	Player 1 Battlecruiser: (4, 6) -> (4, 7)
+	Player 1 Battlecruiser: (4, 6) -> (4, 7)
 
 END OF TURN 6 MOVEMENT PHASE
-
-BEGINNING OF TURN 6 COMBAT PHASE
-
-END OF TURN 6 COMBAT PHASE
-
-BEGINNING OF TURN 7 MOVEMENT PHASE
-
-	Player 2 Battlecruiser: (4, 2) -> (4, 1)
-
-END OF TURN 7 MOVEMENT PHASE
-
-BEGINNING OF TURN 7 COMBAT PHASE
-
-END OF TURN 7 COMBAT PHASE
-
-WINNER: PLAYER 2
