@@ -2,19 +2,22 @@ import random, math
 
 class MoveToOpponent:
     def __init__(self):
-        self.player = None
+        self.simple_board = None
 
-    def min_distance_translation(self, choices, ship, target_coords):
+    def current_dist(self, coords_1, choice, coords_2):
+        new_point = (coords_1[0] + choice[0], coords_1[0] + choice[1])
+        return math.dist(new_point, coords_2)
+
+    def min_distance_translation(self, ship_info, choices, target_coords):
 
         if choices != []:
             
             min_choice = choices[0]
-            new_point = (ship.coords[0] + min_choice[0], ship.coords[1] + min_choice[1])
-            min_distance = math.dist(new_point, target_coords)
+            min_distance = self.current_dist(ship_info['coords'], min_choice, target_coords)
 
             for choice in choices:
-                current_coords = (ship.coords[0] + choice[0], ship.coords[1] + choice[1])
-                current_distance = math.dist(current_coords, target_coords)
+
+                current_distance = self.current_dist(ship_info['coords'], choice, target_coords)
 
                 if current_distance < min_distance:
                     min_distance = current_distance
@@ -22,10 +25,16 @@ class MoveToOpponent:
 
             return min_choice
 
-    def choose_translation(self, players, board, choices, ship):
-        opponent_home_colony_coords = players[self.player.get_opponent_player_number()].home_colony.coords
-        return self.min_distance_translation(choices, ship, opponent_home_colony_coords)
+    def get_opponent_home_colony_coords(self):
+        for key, value in self.simple_board.items():
+            for info in value:
+                if info['obj_type'] == 'Colony':
+                    return key
+
+    def choose_translation(self, ship_info, choices):
+        return self.min_distance_translation(ship_info, choices, self.get_opponent_home_colony_coords())
         
-    def choose_target(self, opponent_ships):
-        random_idx = math.floor(len(opponent_ships) * random.random())
-        return opponent_ships[random_idx]
+    def choose_target(self, ship_info, simplified_combat_order):
+        for info in simplified_combat_order:
+            if info['player_num'] != ship_info['player_num']:
+                return info
