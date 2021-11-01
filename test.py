@@ -1,4 +1,3 @@
-
 import sys
 from game import *
 from player import *
@@ -14,15 +13,20 @@ from maia    import * # StraightToEnemyColony()
 from anton   import * # CustomStrategy()
 from william import * # Custom(), MoveOffBoard(), MoveOnce()
 
-move = (0, 1)
-strategies = [
-    Custom(),
-    SameMove(move)
-]
+winners = {1: 0, 2: 0, 'Tie': 0}
+num_iterations = 50
 
-players = [Player(strategy) for strategy in strategies]
-game = Game(players, show_game=False)
-game.run()
-print(game.winner)
+for _ in range(num_iterations):
+    
+    move = (1, 0)
+    strategies = [
+        MoveToOpponent(),
+        SameMove(move)
+    ]
 
-# works with everyone
+    players = [Player(strategy) for strategy in strategies]
+    game = Game(players, show_game=False)
+    game.run()
+    winners[game.winner] += 1
+
+print(winners)

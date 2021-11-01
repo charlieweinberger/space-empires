@@ -1,18 +1,18 @@
 
 BEGINNING OF TURN 1 MOVEMENT PHASE
 
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 2 Scout: (4, 7) -> (4, 6)
-	Player 2 Scout: (4, 7) -> (4, 6)
-	Player 2 Scout: (4, 7) -> (4, 6)
-	Player 2 BattleCruiser: (4, 7) -> (4, 6)
-	Player 2 BattleCruiser: (4, 7) -> (4, 6)
-	Player 2 BattleCruiser: (4, 7) -> (4, 6)
+	Player 1 Scout: (4, 1) -> (4, 2)
+	Player 1 Scout: (4, 1) -> (4, 2)
+	Player 1 Scout: (4, 1) -> (4, 2)
+	Player 1 BattleCruiser: (4, 1) -> (4, 2)
+	Player 1 BattleCruiser: (4, 1) -> (4, 2)
+	Player 1 BattleCruiser: (4, 1) -> (4, 2)
+	Player 2 Scout: (4, 7) -> (5, 7)
+	Player 2 Scout: (4, 7) -> (5, 7)
+	Player 2 Scout: (4, 7) -> (5, 7)
+	Player 2 BattleCruiser: (4, 7) -> (5, 7)
+	Player 2 BattleCruiser: (4, 7) -> (5, 7)
+	Player 2 BattleCruiser: (4, 7) -> (5, 7)
 
 END OF TURN 1 MOVEMENT PHASE
 
@@ -22,18 +22,18 @@ END OF TURN 1 COMBAT PHASE
 
 BEGINNING OF TURN 2 MOVEMENT PHASE
 
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 2 Scout: (4, 6) -> (4, 5)
-	Player 2 Scout: (4, 6) -> (4, 5)
-	Player 2 Scout: (4, 6) -> (4, 5)
-	Player 2 BattleCruiser: (4, 6) -> (4, 5)
-	Player 2 BattleCruiser: (4, 6) -> (4, 5)
-	Player 2 BattleCruiser: (4, 6) -> (4, 5)
+	Player 1 Scout: (4, 2) -> (4, 3)
+	Player 1 Scout: (4, 2) -> (4, 3)
+	Player 1 Scout: (4, 2) -> (4, 3)
+	Player 1 BattleCruiser: (4, 2) -> (4, 3)
+	Player 1 BattleCruiser: (4, 2) -> (4, 3)
+	Player 1 BattleCruiser: (4, 2) -> (4, 3)
+	Player 2 Scout: (5, 7) -> (6, 7)
+	Player 2 Scout: (5, 7) -> (6, 7)
+	Player 2 Scout: (5, 7) -> (6, 7)
+	Player 2 BattleCruiser: (5, 7) -> (6, 7)
+	Player 2 BattleCruiser: (5, 7) -> (6, 7)
+	Player 2 BattleCruiser: (5, 7) -> (6, 7)
 
 END OF TURN 2 MOVEMENT PHASE
 
@@ -43,18 +43,18 @@ END OF TURN 2 COMBAT PHASE
 
 BEGINNING OF TURN 3 MOVEMENT PHASE
 
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 2 Scout: (4, 5) -> (4, 4)
-	Player 2 Scout: (4, 5) -> (4, 4)
-	Player 2 Scout: (4, 5) -> (4, 4)
-	Player 2 BattleCruiser: (4, 5) -> (4, 4)
-	Player 2 BattleCruiser: (4, 5) -> (4, 4)
-	Player 2 BattleCruiser: (4, 5) -> (4, 4)
+	Player 1 Scout: (4, 3) -> (4, 4)
+	Player 1 Scout: (4, 3) -> (4, 4)
+	Player 1 Scout: (4, 3) -> (4, 4)
+	Player 1 BattleCruiser: (4, 3) -> (4, 4)
+	Player 1 BattleCruiser: (4, 3) -> (4, 4)
+	Player 1 BattleCruiser: (4, 3) -> (4, 4)
+	Player 2 Scout: (6, 7) -> (7, 7)
+	Player 2 Scout: (6, 7) -> (7, 7)
+	Player 2 Scout: (6, 7) -> (7, 7)
+	Player 2 BattleCruiser: (6, 7) -> (7, 7)
+	Player 2 BattleCruiser: (6, 7) -> (7, 7)
+	Player 2 BattleCruiser: (6, 7) -> (7, 7)
 
 END OF TURN 3 MOVEMENT PHASE
 
@@ -64,18 +64,18 @@ END OF TURN 3 COMBAT PHASE
 
 BEGINNING OF TURN 4 MOVEMENT PHASE
 
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 2 Scout: (4, 4) -> (4, 3)
-	Player 2 Scout: (4, 4) -> (4, 3)
-	Player 2 Scout: (4, 4) -> (4, 3)
-	Player 2 BattleCruiser: (4, 4) -> (4, 3)
-	Player 2 BattleCruiser: (4, 4) -> (4, 3)
-	Player 2 BattleCruiser: (4, 4) -> (4, 3)
+	Player 1 Scout: (4, 4) -> (4, 5)
+	Player 1 Scout: (4, 4) -> (4, 5)
+	Player 1 Scout: (4, 4) -> (4, 5)
+	Player 1 BattleCruiser: (4, 4) -> (4, 5)
+	Player 1 BattleCruiser: (4, 4) -> (4, 5)
+	Player 1 BattleCruiser: (4, 4) -> (4, 5)
+	Player 2 Scout tried to make an invalid move: (1, 0)
+	Player 2 Scout tried to make an invalid move: (1, 0)
+	Player 2 Scout tried to make an invalid move: (1, 0)
+	Player 2 BattleCruiser tried to make an invalid move: (1, 0)
+	Player 2 BattleCruiser tried to make an invalid move: (1, 0)
+	Player 2 BattleCruiser tried to make an invalid move: (1, 0)
 
 END OF TURN 4 MOVEMENT PHASE
 
@@ -85,18 +85,18 @@ END OF TURN 4 COMBAT PHASE
 
 BEGINNING OF TURN 5 MOVEMENT PHASE
 
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 2 Scout: (4, 3) -> (4, 2)
-	Player 2 Scout: (4, 3) -> (4, 2)
-	Player 2 Scout: (4, 3) -> (4, 2)
-	Player 2 BattleCruiser: (4, 3) -> (4, 2)
-	Player 2 BattleCruiser: (4, 3) -> (4, 2)
-	Player 2 BattleCruiser: (4, 3) -> (4, 2)
+	Player 1 Scout: (4, 5) -> (4, 6)
+	Player 1 Scout: (4, 5) -> (4, 6)
+	Player 1 Scout: (4, 5) -> (4, 6)
+	Player 1 BattleCruiser: (4, 5) -> (4, 6)
+	Player 1 BattleCruiser: (4, 5) -> (4, 6)
+	Player 1 BattleCruiser: (4, 5) -> (4, 6)
+	Player 2 Scout tried to make an invalid move: (1, 0)
+	Player 2 Scout tried to make an invalid move: (1, 0)
+	Player 2 Scout tried to make an invalid move: (1, 0)
+	Player 2 BattleCruiser tried to make an invalid move: (1, 0)
+	Player 2 BattleCruiser tried to make an invalid move: (1, 0)
+	Player 2 BattleCruiser tried to make an invalid move: (1, 0)
 
 END OF TURN 5 MOVEMENT PHASE
 
@@ -106,75 +106,23 @@ END OF TURN 5 COMBAT PHASE
 
 BEGINNING OF TURN 6 MOVEMENT PHASE
 
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 Scout tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 1 BattleCruiser tried to make an invalid move: (0, -1)
-	Player 2 Scout: (4, 2) -> (4, 1)
-	Player 2 Scout: (4, 2) -> (4, 1)
-	Player 2 Scout: (4, 2) -> (4, 1)
-	Player 2 BattleCruiser: (4, 2) -> (4, 1)
-	Player 2 BattleCruiser: (4, 2) -> (4, 1)
-	Player 2 BattleCruiser: (4, 2) -> (4, 1)
+	Player 1 Scout: (4, 6) -> (4, 7)
+	Player 1 Scout: (4, 6) -> (4, 7)
+	Player 1 Scout: (4, 6) -> (4, 7)
+	Player 1 BattleCruiser: (4, 6) -> (4, 7)
+	Player 1 BattleCruiser: (4, 6) -> (4, 7)
+	Player 1 BattleCruiser: (4, 6) -> (4, 7)
+	Player 2 Scout tried to make an invalid move: (1, 0)
+	Player 2 Scout tried to make an invalid move: (1, 0)
+	Player 2 Scout tried to make an invalid move: (1, 0)
+	Player 2 BattleCruiser tried to make an invalid move: (1, 0)
+	Player 2 BattleCruiser tried to make an invalid move: (1, 0)
+	Player 2 BattleCruiser tried to make an invalid move: (1, 0)
 
 END OF TURN 6 MOVEMENT PHASE
 
 BEGINNING OF TURN 6 COMBAT PHASE
 
-	 Combat at: (4, 1)
-
-		Attacker: Player 1 BattleCruiser
-		Defender: Player 2 BattleCruiser
-		(Miss)
-
-		Attacker: Player 1 BattleCruiser
-		Defender: Player 2 BattleCruiser
-		(Miss)
-
-		Attacker: Player 1 BattleCruiser
-		Defender: Player 2 BattleCruiser
-		(Miss)
-
-		Attacker: Player 2 BattleCruiser
-		Defender: Player 1 Scout
-		(Miss)
-
-		Attacker: Player 2 BattleCruiser
-		Defender: Player 1 BattleCruiser
-		Hit!
-
-		Player 2 BattleCruiser dealt 1 dmg to Player 1 BattleCruiser
-
-		Attacker: Player 2 BattleCruiser
-		Defender: Player 1 BattleCruiser
-		(Miss)
-
-		Attacker: Player 1 Scout
-		Defender: Player 2 BattleCruiser
-		(Miss)
-
-		Attacker: Player 1 Scout
-		Defender: Player 2 BattleCruiser
-		(Miss)
-
-		Attacker: Player 1 Scout
-		Defender: Player 2 BattleCruiser
-		(Miss)
-
-		Attacker: Player 2 Scout
-		Defender: Player 1 BattleCruiser
-		(Miss)
-
-		Attacker: Player 2 Scout
-		Defender: Player 1 BattleCruiser
-		(Miss)
-
-		Attacker: Player 2 Scout
-		Defender: Player 1 Scout
-		(Miss)
-
 END OF TURN 6 COMBAT PHASE
 
-WINNER: PLAYER 2
+WINNER: PLAYER 1

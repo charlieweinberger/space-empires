@@ -14,7 +14,7 @@ class Game:
         self.board_size = board_size
         self.board_len = self.board_size[0]
 
-        self.logger = Logger('/home/runner/space-empires-new/logs/logs.txt')
+        self.logger = Logger('/workspace/space-empires-new/logs/logs.txt')
         self.logger.clear_log()
 
         self.board = {(x, y): [] for x in range(1, self.board_len + 1) for y in range(1, self.board_len + 1)}
@@ -45,18 +45,11 @@ class Game:
         for i, player in self.players.items():
             player.player_num = i
 
-        # player number limit
-        if len(self.players) > 4:
-            self.logs.write('CANNOT HAVE MORE THAN 4 PLAYERS - SETUP STOPPED')
-            return
+        mid = (self.board_len + 1) // 2
+        ship_coords = {1: (mid, 1),
+                       2: (mid, self.board_len)}
 
-        mid_x = (self.board_len + 1) // 2
-        ship_coords = {1: (mid_x, 1),
-                       2: (mid_x, self.board_len)}
-
-        for i in [1, 2]:
-
-            coords = ship_coords[i]
+        for i, coords in ship_coords.items():
 
             # add ships
             ships = [Scout(i, j + 1, coords) for j in range(3)] + [BattleCruiser(i, j + 1, coords) for j in range(3)]
@@ -153,13 +146,9 @@ class Game:
         if True:
         # while len(self.combat_coords) > 0:
 
-            print(self.combat_coords)
-
             coords_to_delete = []
             
             for coords in self.combat_coords:
-
-                print('1')
 
                 self.logger.write(f'\n\t Combat at: {coords}\n')
 
@@ -167,23 +156,17 @@ class Game:
                 
                 for ship in combat_order:
                 
-                    print('2')
-
                     if ship.hp <= 0: continue
                 
                     player = self.players[ship.player_num]
                     opponent_ships = self.get_opponent_ships(ship, combat_order) 
                     opponent_ships_info = [obj.__dict__ for obj in opponent_ships]
                 
-                    print('3')
-
                     if len(opponent_ships) == 0: continue
                     
                     target_info = player.choose_target(ship.__dict__, combat_order)
                     target = self.obj_from_info(target_info)
                 
-                    print('4')
-
                     if target not in opponent_ships: continue
                 
                     self.logger.write(f'\n\t\tAttacker: Player {ship.player_num} {ship.name}\n')
@@ -191,8 +174,6 @@ class Game:
                 
                     if self.hit(ship, target):
                 
-                        print('5')
-
                         self.logger.write('\t\tHit!\n')
                         
                         target.hp -= 1
@@ -201,29 +182,19 @@ class Game:
                         
                         if target.hp <= 0:
                 
-                            print('6')
-
                             self.delete_ship(target)
                             self.logger.write(f'\t\tPlayer {target.player_num} {target.name} wasdestroyed\n')
-                        
-                        print('6')
-                    
+                                            
                     else:
                         self.logger.write('\t\t(Miss)\n')
                     
                     self.update_simple_boards()
-
-                    print('7')
                 
                 combat_order = [ship for ship in combat_order if ship.hp > 0]
                 if self.all_same_team(combat_order) or len(combat_order) == 0:
                     coords_to_delete.append(coords)
-                
-                print('8')
-            
+                            
             self.combat_coords = [coords for coords in self.combat_coords if coords not in coords_to_delete]
-
-            print('9')
 
         self.logger.write(f'\nEND OF TURN {self.turn} COMBAT PHASE\n')
 
