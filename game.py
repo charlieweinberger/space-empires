@@ -164,7 +164,7 @@ class Game:
                 
                     if len(opponent_ships) == 0: continue
                     
-                    target_info = player.choose_target(ship.__dict__, combat_order)
+                    target_info = player.choose_target(ship.__dict__, [ship.__dict__ for ship in combat_order])
                     target = self.obj_from_info(target_info)
                 
                     if target not in opponent_ships: continue
@@ -178,7 +178,7 @@ class Game:
                         
                         target.hp -= 1
                 
-                        self.logger.write(f'\n\t\tPlayer {ship.player_num} {ship.name} dealt 1 dmgto Player {target.player_num} {target.name}\n')
+                        self.logger.write(f'\n\t\tPlayer {ship.player_num} {ship.name} dealt 1 dmg to Player {target.player_num} {target.name}\n')
                         
                         if target.hp <= 0:
                 

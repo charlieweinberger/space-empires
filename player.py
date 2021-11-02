@@ -19,5 +19,4 @@ class Player:
         return self.strategy.choose_translation(ship.__dict__, choices)
 
     def choose_target(self, ship_info, combat_order):
-        simplified_combat_order = [ship.__dict__ for ship in combat_order]
-        return self.strategy.choose_target(ship_info, simplified_combat_order)
+        return self.strategy.choose_target(ship_info, combat_order)
