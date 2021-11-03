@@ -4,8 +4,8 @@ from player import *
 
 sys.path.append('strategies')
 from move_to_opponent_strat import * # MoveToOpponent()
-from same_move_strat import * # SameMove(move)
-from wait_strat import * # Wait()
+from same_move_strat        import * # SameMove(move)
+from wait_strat             import * # Wait()
 
 from justin  import * # MoveToClosestCol()
 from cayden  import * # MoveToEnemyHomeColony()
@@ -29,4 +29,6 @@ for _ in range(num_iterations):
     game.run()
     winners[game.winner] += 1
 
-print({k:f'{100*v/num_iterations}%' for k, v in winners.items()})
+print(winners)
+for key, val in winners.items():
+    print(f'{key} wins: {100 * val / sum(winners.values())}%')
