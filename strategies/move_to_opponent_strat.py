@@ -33,6 +33,11 @@ class MoveToOpponent:
 
     def choose_translation(self, ship_info, choices):
         opponent_home_colony_coords = self.get_opponent_home_colony_coords(ship_info)
+        print('\nstuff')
+        print(f'ship coords: {ship_info["coords"]}')
+        print(f'choices: {choices}')
+        print(f'opponent home colony coords: {opponent_home_colony_coords}')
+        print(f'min distance: {self.min_distance_translation(ship_info, choices, opponent_home_colony_coords)}')
         return self.min_distance_translation(ship_info, choices, opponent_home_colony_coords)
         
     def choose_target(self, ship_info, simplified_combat_order):
