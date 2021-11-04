@@ -7,17 +7,16 @@ from logger import *
 
 class Game:
 
-    def __init__(self, players, show_game=True, board_size=[7,7]):
+    def __init__(self, players, board_size=[7,7]):
 
         self.players = {i+1: players[i] for i in range(len(players))}
-        self.show_game = show_game
         self.board_size = board_size
         self.board_len = self.board_size[0]
 
         self.logger = Logger('/workspace/space-empires-new/logs/logs.txt')
         self.logger.clear_log()
 
-        self.board = {(x, y): [] for x in range(1, self.board_len + 1) for y in range(1, self.board_len + 1)}
+        self.board = {(x, y): [] for x in range(self.board_len) for y in range(self.board_len)}
         self.turn = 1
         self.winner = None
         self.combat_coords = []
@@ -45,9 +44,9 @@ class Game:
         for i, player in self.players.items():
             player.player_num = i
 
-        mid = (self.board_len + 1) // 2
-        ship_coords = {1: (mid, 1),
-                       2: (mid, self.board_len)}
+        mid = self.board_len // 2
+        ship_coords = {1: (0, mid),
+                       2: (self.board_len-1, mid)}
 
         for i, coords in ship_coords.items():
 
@@ -132,9 +131,7 @@ class Game:
                     self.combat_coords.append(ship.coords)
                 
                 self.logger.write(f'\tPlayer {ship.player_num} {ship.name}: {current_coords} -> {ship.coords}\n')
-        
-        if self.show_game: self.print_board()
-        
+                
         self.logger.write(f'\nEND OF TURN {self.turn} MOVEMENT PHASE\n')
 
     def complete_combat_phase(self):
@@ -183,7 +180,7 @@ class Game:
                         if target.hp <= 0:
                 
                             self.delete_ship(target)
-                            self.logger.write(f'\t\tPlayer {target.player_num} {target.name} wasdestroyed\n')
+                            self.logger.write(f'\t\tPlayer {target.player_num} {target.name} was destroyed\n')
                                             
                     else:
                         self.logger.write('\t\t(Miss)\n')
@@ -221,27 +218,3 @@ class Game:
         elif p2_wins:
             self.logger.write('\nWINNER: PLAYER 2')
             self.winner = 2
-
-    def print_board(self):
-        
-        print('')
-        for y in range(1, self.board_len + 1):
-            
-            row_string = ''
-            for x in range(1, self.board_len + 1):
-                coords = (x, y)
-
-                if self.board[coords] == []:
-                    row_string += '[ ]'
-                
-                elif coords in self.combat_coords:
-                    row_string += '[*]'
-                
-                elif self.board[coords][0].player_num == 1:
-                    row_string += '[v]'
-                
-                elif self.board[coords][0].player_num == 2:
-                    row_string += '[^]'
-            
-            print(row_string)
-        print('\n')
