@@ -1,22 +1,23 @@
 import sys
 sys.path.append('strategies')
 
-from game                   import *
-from player                 import *
+from game import *
+from player import *
+
 from move_to_opponent_strat import * # MoveToOpponent()
-from justin                 import * # MoveToClosestCol()
-from cayden                 import * # MoveToEnemyHomeColony()
-from maia                   import * # StraightToEnemyColony()
-from anton                  import * # CustomStrategy()
-from william                import * # Custom(), MoveOffBoard(), MoveOnce()
+from justin  import *
+from cayden  import * 
+from maia    import * 
+from anton   import *
+from william import *
 
 winners = {1: 0, 2: 0, 'Tie': 0}
-num_iterations = 1
+num_iterations = 1000
 
 for _ in range(num_iterations):
     
     strategies = [
-        MoveToOpponent(),
+        WilliamStrat(),
         MoveToOpponent()
     ]
 
@@ -28,3 +29,7 @@ for _ in range(num_iterations):
 print(winners)
 for key, val in winners.items():
     print(f'{key} wins: {100 * val / sum(winners.values())}%')
+
+# works with cayden and maia
+# I beat Justin by a lot
+# Anton and William beat me by a little bit

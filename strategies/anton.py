@@ -2,7 +2,7 @@ from random import random
 import math
 
 
-class CustomStrategy():
+class AntonStrat():
   def __init__(self):
     self.simple_board = {}
   

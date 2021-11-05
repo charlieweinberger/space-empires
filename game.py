@@ -13,7 +13,7 @@ class Game:
         self.board_size = board_size
         self.board_len = self.board_size[0]
 
-        self.logger = Logger('/workspace/space-empires-new/logs/logs.txt')
+        self.logger = Logger('/workspace/space-empires/logs/logs.txt')
         self.logger.clear_log()
 
         self.board = {(x, y): [] for x in range(self.board_len) for y in range(self.board_len)}

@@ -1,4 +1,4 @@
-class StraightToEnemyColony () :
+class MaiaStrat () :
     def __init__(self) :
         self.simple_board = {}
 

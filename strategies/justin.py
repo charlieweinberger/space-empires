@@ -1,6 +1,6 @@
 import math, random
 
-class MoveToClosestCol:
+class JustinStrat:
     def __init__(self):
         self.simple_board = {}
 

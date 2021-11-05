@@ -1,7 +1,7 @@
 import math
 import random
 
-class MoveToEnemyHomeColony():
+class CaydenStrat():
     def __init__(self):
         self.simple_board = None
 
