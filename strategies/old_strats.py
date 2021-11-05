@@ -14,7 +14,6 @@ class SameMove:
             if info['player_num'] != ship_info['player_num']:
                 return info
 
-
 class Wait:
     def __init__(self):
         self.player = None

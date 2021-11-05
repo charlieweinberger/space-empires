@@ -27,20 +27,18 @@ class Game:
 
         if coords == None: return []
 
-        all_translations = [(0,0), (0,1), (0,-1), (1,0), (-1,0)]
         in_bounds_translations = []
 
-        for translation in all_translations:
+        for translation in [(0,0), (0,1), (0,-1), (1,0), (-1,0)]:
 
             new_x, new_y = self.translate(coords, translation)
-            if (new_x, new_y) != None and 1 <= new_x <= self.board_len and 1 <= new_y <= self.board_len:
+            if 0 <= new_x <= self.board_len-1 and 0 <= new_y <= self.board_len-1:
                 in_bounds_translations.append(translation)
         
         return in_bounds_translations
 
     def set_up_game(self):
 
-        # player numbers
         for i, player in self.players.items():
             player.player_num = i
 
@@ -48,19 +46,23 @@ class Game:
         ship_coords = {1: (0, mid),
                        2: (self.board_len-1, mid)}
 
+        self.logger.write('SETTING UP GAME...')
+
         for i, coords in ship_coords.items():
 
-            # add ships
+            self.logger.write(f'\nPLAYER {i} STARTING AT {coords}')
+
             ships = [Scout(i, j + 1, coords) for j in range(3)] + [BattleCruiser(i, j + 1, coords) for j in range(3)]
             self.board[coords]  += ships.copy()
             self.players[i].ships = ships.copy()
 
-            # add home colonies
             home_colony = Colony(i, coords)
             home_colony.is_home_colony = True
             self.board[coords].append(home_colony)
             self.players[i].home_colony = home_colony
         
+        self.logger.write('\n')
+
         self.update_simple_boards()
 
     def update_simple_boards(self):
@@ -88,7 +90,8 @@ class Game:
             if obj.__dict__ == info:
                 return obj
 
-    def update_ship_coords(self, ship, new_coords):
+    def move_ship(self, ship, new_coords):
+        self.logger.write(f'\t\tPLAYER {ship.ship_id()}: {ship.coords} -> {new_coords}\n')
         self.board[ship.coords].remove(ship)
         ship.coords = new_coords
         self.board[ship.coords].append(ship)
@@ -98,10 +101,18 @@ class Game:
         self.players[ship.player_num].ships.remove(ship)
     
     def hit(self, attacker, defender):
+
+        self.logger.write(f'\n\t\tAttacker: Player {attacker.ship_id()}\n')
+        self.logger.write(f'\t\tDefender: Player {defender.ship_id()}\n')
+
         if attacker.hp > 0 and defender.hp > 0 and attacker.player_num != defender.player_num:
+            
             role = random.randint(1, 10)
             threshold = attacker.atk - defender.df
-            return role <= threshold
+            hit = (role <= threshold)
+            
+            self.logger.write(f'\t\t{"HIT!" if hit else "(MISS)"}\n')
+            return hit
 
     def complete_movement_phase(self):
 
@@ -109,7 +120,11 @@ class Game:
         
         for player in self.players.values():
 
-            if len(player.ships) == 0: continue
+            if len(player.ships) == 0:
+                self.logger.write(f'\tPLAYER {player.player_num} HAS NO SHIPS\n\n')
+                continue
+
+            self.logger.write(f'\tPLAYER {player.player_num} MOVING:\n')
 
             for ship in player.ships:
 
@@ -121,18 +136,18 @@ class Game:
                 new_coords = self.translate(current_coords, translation)
 
                 if new_coords not in self.board.keys():
-                    self.logger.write(f'\tPlayer {ship.player_num} {ship.name} tried to make an invalid move: {translation}\n')
+                    self.logger.write(f'\t\tPlayer {ship.ship_id()} tried to make an invalid move: {translation}\n')
                     continue
 
-                self.update_ship_coords(ship, new_coords)
+                self.move_ship(ship, new_coords)
                 self.update_simple_boards()
 
                 if self.there_are_opponent_ships(ship) and ship.coords not in self.combat_coords:
                     self.combat_coords.append(ship.coords)
-                
-                self.logger.write(f'\tPlayer {ship.player_num} {ship.name}: {current_coords} -> {ship.coords}\n')
-                
-        self.logger.write(f'\nEND OF TURN {self.turn} MOVEMENT PHASE\n')
+            
+            self.logger.write('\n')
+
+        self.logger.write(f'END OF TURN {self.turn} MOVEMENT PHASE\n')
 
     def complete_combat_phase(self):
         
@@ -140,17 +155,16 @@ class Game:
 
         if self.winner != None: return
         
-        if True:
-        # while len(self.combat_coords) > 0:
+        coords_to_delete = []
 
-            coords_to_delete = []
+        for coords in self.combat_coords:
             
-            for coords in self.combat_coords:
+            combat_order = sorted(self.get_ships(coords), key=lambda x: x.ship_class)
+            
+            while not self.all_same_team(combat_order) and len(combat_order) > 0:
 
-                self.logger.write(f'\n\t Combat at: {coords}\n')
+                self.logger.write(f'\n\tCOMBAT AT {coords}:\n')
 
-                combat_order = sorted(self.get_ships(coords), key=lambda x: x.ship_class)
-                
                 for ship in combat_order:
                 
                     if ship.hp <= 0: continue
@@ -166,37 +180,29 @@ class Game:
                 
                     if target not in opponent_ships: continue
                 
-                    self.logger.write(f'\n\t\tAttacker: Player {ship.player_num} {ship.name}\n')
-                    self.logger.write(f'\t\tDefender: Player {target.player_num} {target.name}\n')
-                
                     if self.hit(ship, target):
-                
-                        self.logger.write('\t\tHit!\n')
-                        
+                                        
                         target.hp -= 1
                 
-                        self.logger.write(f'\n\t\tPlayer {ship.player_num} {ship.name} dealt 1 dmg to Player {target.player_num} {target.name}\n')
+                        self.logger.write(f'\n\t\tPlayer {ship.ship_id()} dealt 1 dmg to Player {target.ship_id()}\n')
                         
                         if target.hp <= 0:
                 
                             self.delete_ship(target)
-                            self.logger.write(f'\t\tPlayer {target.player_num} {target.name} was destroyed\n')
-                                            
-                    else:
-                        self.logger.write('\t\t(Miss)\n')
+                            self.logger.write(f'\t\tPlayer {target.ship_id()} was destroyed\n')
                     
                     self.update_simple_boards()
-                
+
                 combat_order = [ship for ship in combat_order if ship.hp > 0]
                 if self.all_same_team(combat_order) or len(combat_order) == 0:
                     coords_to_delete.append(coords)
-                            
+                    
             self.combat_coords = [coords for coords in self.combat_coords if coords not in coords_to_delete]
 
         self.logger.write(f'\nEND OF TURN {self.turn} COMBAT PHASE\n')
 
-    def run(self, f = lambda x: x.winner == None):
-        while f(self):
+    def run(self, f = lambda x: True):
+        while self.winner == None and f(self):
             self.complete_movement_phase()
             self.complete_combat_phase()
             self.check_for_winner()
@@ -211,7 +217,7 @@ class Game:
 
         if p1_wins and p2_wins:
             self.logger.write('\nTIE GAME')
-            self.winner = 'Tie' 
+            self.winner = 'Tie'
         elif p1_wins:
             self.logger.write('\nWINNER: PLAYER 1')
             self.winner = 1

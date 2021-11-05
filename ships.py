@@ -17,6 +17,9 @@ class Scout(Ship):
         self.atk = 3
         self.df = 0
         self.hp = 1
+    
+    def ship_id(self):
+        return f'{self.player_num} {self.name} {self.ship_num}'
 
 class BattleCruiser(Ship):
     
@@ -33,3 +36,6 @@ class BattleCruiser(Ship):
         self.atk = 5
         self.df = 1
         self.hp = 2
+    
+    def ship_id(self):
+        return f'{self.player_num} {self.name} {self.ship_num}'
