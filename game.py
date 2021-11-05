@@ -165,6 +165,10 @@ class Game:
 
                 self.logger.write(f'\n\tCOMBAT AT {coords}:\n')
 
+                self.logger.write('\n\t\tCOMBAT ORDER:\n\n')
+                for ship in combat_order:
+                    self.logger.write(f'\t\t\tPLAYER {ship.ship_id()} \n')
+
                 for ship in combat_order:
                 
                     if ship.hp <= 0: continue
@@ -179,7 +183,7 @@ class Game:
                     target = self.obj_from_info(target_info)
                 
                     if target not in opponent_ships: continue
-                
+                        
                     if self.hit(ship, target):
                                         
                         target.hp -= 1

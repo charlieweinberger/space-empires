@@ -74,18 +74,34 @@ BEGINNING OF TURN 3 COMBAT PHASE
 
 	COMBAT AT (3, 3):
 
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 1 
+			PLAYER 1 BattleCruiser 2 
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 2 BattleCruiser 1 
+			PLAYER 2 BattleCruiser 2 
+			PLAYER 2 BattleCruiser 3 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 1 
+			PLAYER 2 Scout 2 
+			PLAYER 2 Scout 3 
+
 		Attacker: Player 1 BattleCruiser 1
-		Defender: Player 2 BattleCruiser 1
-		HIT!
-
-		Player 1 BattleCruiser 1 dealt 1 dmg to Player 2 BattleCruiser 1
-
-		Attacker: Player 1 BattleCruiser 2
-		Defender: Player 2 BattleCruiser 1
+		Defender: Player 2 BattleCruiser 3
 		(MISS)
 
+		Attacker: Player 1 BattleCruiser 2
+		Defender: Player 2 Scout 2
+		HIT!
+
+		Player 1 BattleCruiser 2 dealt 1 dmg to Player 2 Scout 2
+		Player 2 Scout 2 was destroyed
+
 		Attacker: Player 1 BattleCruiser 3
-		Defender: Player 2 BattleCruiser 1
+		Defender: Player 2 BattleCruiser 2
 		(MISS)
 
 		Attacker: Player 2 BattleCruiser 1
@@ -102,28 +118,45 @@ BEGINNING OF TURN 3 COMBAT PHASE
 		Player 1 BattleCruiser 1 was destroyed
 
 		Attacker: Player 1 Scout 1
-		Defender: Player 2 BattleCruiser 2
+		Defender: Player 2 BattleCruiser 3
 		(MISS)
 
 		Attacker: Player 1 Scout 2
-		Defender: Player 2 Scout 2
+		Defender: Player 2 BattleCruiser 3
+		(MISS)
+
+		Attacker: Player 1 Scout 3
+		Defender: Player 2 BattleCruiser 3
 		HIT!
 
-		Player 1 Scout 2 dealt 1 dmg to Player 2 Scout 2
-		Player 2 Scout 2 was destroyed
+		Player 1 Scout 3 dealt 1 dmg to Player 2 BattleCruiser 3
 
 	COMBAT AT (3, 3):
 
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 2 
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 2 BattleCruiser 1 
+			PLAYER 2 BattleCruiser 2 
+			PLAYER 2 BattleCruiser 3 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 1 
+			PLAYER 2 Scout 3 
+
 		Attacker: Player 1 BattleCruiser 2
-		Defender: Player 2 Scout 1
+		Defender: Player 2 BattleCruiser 1
 		HIT!
 
-		Player 1 BattleCruiser 2 dealt 1 dmg to Player 2 Scout 1
-		Player 2 Scout 1 was destroyed
+		Player 1 BattleCruiser 2 dealt 1 dmg to Player 2 BattleCruiser 1
 
 		Attacker: Player 1 BattleCruiser 3
-		Defender: Player 2 Scout 3
-		(MISS)
+		Defender: Player 2 BattleCruiser 2
+		HIT!
+
+		Player 1 BattleCruiser 3 dealt 1 dmg to Player 2 BattleCruiser 2
 
 		Attacker: Player 2 BattleCruiser 1
 		Defender: Player 1 BattleCruiser 2
@@ -135,14 +168,27 @@ BEGINNING OF TURN 3 COMBAT PHASE
 
 		Attacker: Player 2 BattleCruiser 3
 		Defender: Player 1 BattleCruiser 2
-		(MISS)
+		HIT!
+
+		Player 2 BattleCruiser 3 dealt 1 dmg to Player 1 BattleCruiser 2
 
 		Attacker: Player 1 Scout 1
-		Defender: Player 2 BattleCruiser 3
+		Defender: Player 2 BattleCruiser 1
+		HIT!
+
+		Player 1 Scout 1 dealt 1 dmg to Player 2 BattleCruiser 1
+		Player 2 BattleCruiser 1 was destroyed
+
+		Attacker: Player 1 Scout 2
+		Defender: Player 2 BattleCruiser 2
 		(MISS)
 
 		Attacker: Player 1 Scout 3
-		Defender: Player 2 BattleCruiser 1
+		Defender: Player 2 Scout 3
+		(MISS)
+
+		Attacker: Player 2 Scout 1
+		Defender: Player 1 BattleCruiser 2
 		(MISS)
 
 		Attacker: Player 2 Scout 3
@@ -151,140 +197,21 @@ BEGINNING OF TURN 3 COMBAT PHASE
 
 	COMBAT AT (3, 3):
 
-		Attacker: Player 1 BattleCruiser 2
-		Defender: Player 2 BattleCruiser 1
-		HIT!
+		COMBAT ORDER:
 
-		Player 1 BattleCruiser 2 dealt 1 dmg to Player 2 BattleCruiser 1
-		Player 2 BattleCruiser 1 was destroyed
-
-		Attacker: Player 1 BattleCruiser 3
-		Defender: Player 2 Scout 3
-		(MISS)
-
-		Attacker: Player 2 BattleCruiser 2
-		Defender: Player 1 BattleCruiser 2
-		(MISS)
-
-		Attacker: Player 2 BattleCruiser 3
-		Defender: Player 1 BattleCruiser 2
-		(MISS)
-
-		Attacker: Player 1 Scout 1
-		Defender: Player 2 Scout 3
-		HIT!
-
-		Player 1 Scout 1 dealt 1 dmg to Player 2 Scout 3
-		Player 2 Scout 3 was destroyed
-
-		Attacker: Player 1 Scout 3
-		Defender: Player 2 BattleCruiser 2
-		(MISS)
-
-	COMBAT AT (3, 3):
-
-		Attacker: Player 1 BattleCruiser 2
-		Defender: Player 2 BattleCruiser 3
-		(MISS)
-
-		Attacker: Player 1 BattleCruiser 3
-		Defender: Player 2 BattleCruiser 2
-		HIT!
-
-		Player 1 BattleCruiser 3 dealt 1 dmg to Player 2 BattleCruiser 2
-
-		Attacker: Player 2 BattleCruiser 2
-		Defender: Player 1 BattleCruiser 2
-		(MISS)
-
-		Attacker: Player 2 BattleCruiser 3
-		Defender: Player 1 BattleCruiser 2
-		(MISS)
-
-		Attacker: Player 1 Scout 1
-		Defender: Player 2 BattleCruiser 3
-		HIT!
-
-		Player 1 Scout 1 dealt 1 dmg to Player 2 BattleCruiser 3
-
-		Attacker: Player 1 Scout 2
-		Defender: Player 2 BattleCruiser 3
-		(MISS)
-
-		Attacker: Player 1 Scout 3
-		Defender: Player 2 BattleCruiser 2
-		(MISS)
-
-	COMBAT AT (3, 3):
-
-		Attacker: Player 1 BattleCruiser 2
-		Defender: Player 2 BattleCruiser 3
-		(MISS)
-
-		Attacker: Player 1 BattleCruiser 3
-		Defender: Player 2 BattleCruiser 2
-		(MISS)
-
-		Attacker: Player 2 BattleCruiser 2
-		Defender: Player 1 BattleCruiser 2
-		(MISS)
-
-		Attacker: Player 2 BattleCruiser 3
-		Defender: Player 1 BattleCruiser 2
-		(MISS)
-
-		Attacker: Player 1 Scout 1
-		Defender: Player 2 BattleCruiser 2
-		(MISS)
-
-		Attacker: Player 1 Scout 2
-		Defender: Player 2 BattleCruiser 2
-		(MISS)
-
-		Attacker: Player 1 Scout 3
-		Defender: Player 2 BattleCruiser 2
-		(MISS)
-
-	COMBAT AT (3, 3):
-
-		Attacker: Player 1 BattleCruiser 2
-		Defender: Player 2 BattleCruiser 3
-		(MISS)
-
-		Attacker: Player 1 BattleCruiser 3
-		Defender: Player 2 BattleCruiser 2
-		(MISS)
-
-		Attacker: Player 2 BattleCruiser 2
-		Defender: Player 1 BattleCruiser 2
-		HIT!
-
-		Player 2 BattleCruiser 2 dealt 1 dmg to Player 1 BattleCruiser 2
-
-		Attacker: Player 2 BattleCruiser 3
-		Defender: Player 1 BattleCruiser 2
-		(MISS)
-
-		Attacker: Player 1 Scout 1
-		Defender: Player 2 BattleCruiser 2
-		(MISS)
-
-		Attacker: Player 1 Scout 2
-		Defender: Player 2 BattleCruiser 2
-		(MISS)
-
-		Attacker: Player 1 Scout 3
-		Defender: Player 2 BattleCruiser 3
-		(MISS)
-
-	COMBAT AT (3, 3):
+			PLAYER 1 BattleCruiser 2 
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 2 BattleCruiser 2 
+			PLAYER 2 BattleCruiser 3 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 1 
+			PLAYER 2 Scout 3 
 
 		Attacker: Player 1 BattleCruiser 2
 		Defender: Player 2 BattleCruiser 2
-		HIT!
-
-		Player 1 BattleCruiser 2 dealt 1 dmg to Player 2 BattleCruiser 2
-		Player 2 BattleCruiser 2 was destroyed
+		(MISS)
 
 		Attacker: Player 1 BattleCruiser 3
 		Defender: Player 2 BattleCruiser 3
@@ -292,6 +219,91 @@ BEGINNING OF TURN 3 COMBAT PHASE
 
 		Player 1 BattleCruiser 3 dealt 1 dmg to Player 2 BattleCruiser 3
 		Player 2 BattleCruiser 3 was destroyed
+
+		Attacker: Player 2 BattleCruiser 2
+		Defender: Player 1 BattleCruiser 2
+		(MISS)
+
+		Attacker: Player 1 Scout 1
+		Defender: Player 2 Scout 3
+		(MISS)
+
+		Attacker: Player 1 Scout 2
+		Defender: Player 2 BattleCruiser 2
+		(MISS)
+
+		Attacker: Player 1 Scout 3
+		Defender: Player 2 Scout 3
+		(MISS)
+
+		Attacker: Player 2 Scout 1
+		Defender: Player 1 BattleCruiser 2
+		(MISS)
+
+		Attacker: Player 2 Scout 3
+		Defender: Player 1 BattleCruiser 2
+		(MISS)
+
+	COMBAT AT (3, 3):
+
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 2 
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 2 BattleCruiser 2 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 1 
+			PLAYER 2 Scout 3 
+
+		Attacker: Player 1 BattleCruiser 2
+		Defender: Player 2 Scout 1
+		(MISS)
+
+		Attacker: Player 1 BattleCruiser 3
+		Defender: Player 2 Scout 3
+		HIT!
+
+		Player 1 BattleCruiser 3 dealt 1 dmg to Player 2 Scout 3
+		Player 2 Scout 3 was destroyed
+
+		Attacker: Player 2 BattleCruiser 2
+		Defender: Player 1 BattleCruiser 2
+		(MISS)
+
+		Attacker: Player 1 Scout 1
+		Defender: Player 2 BattleCruiser 2
+		(MISS)
+
+		Attacker: Player 1 Scout 2
+		Defender: Player 2 Scout 1
+		(MISS)
+
+		Attacker: Player 1 Scout 3
+		Defender: Player 2 Scout 1
+		HIT!
+
+		Player 1 Scout 3 dealt 1 dmg to Player 2 Scout 1
+		Player 2 Scout 1 was destroyed
+
+	COMBAT AT (3, 3):
+
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 2 
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 2 BattleCruiser 2 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+
+		Attacker: Player 1 BattleCruiser 2
+		Defender: Player 2 BattleCruiser 2
+		HIT!
+
+		Player 1 BattleCruiser 2 dealt 1 dmg to Player 2 BattleCruiser 2
+		Player 2 BattleCruiser 2 was destroyed
 
 END OF TURN 3 COMBAT PHASE
 
