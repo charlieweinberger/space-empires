@@ -12,7 +12,7 @@ from maia_comp    import *
 from anton_comp   import *
 from william_comp import *
 
-# Maia's code does not work
+# Maia's code did not work
 
 # Me vs Justin : 25-75
 # Me vs Cayden : 23-77
