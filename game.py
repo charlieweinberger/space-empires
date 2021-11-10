@@ -71,7 +71,7 @@ class Game:
             player.strategy.simple_board = simple_board
 
     def get_ships(self, coords):
-        return [obj for obj in self.board[coords] if isinstance(obj, Ship)]
+        return [obj for obj in self.board[coords] if obj.obj_type == 'Ship']
 
     def get_opponent_ships(self, ship, combat_order):
         return [obj for obj in combat_order if obj.player_num != ship.player_num and obj.hp > 0]
