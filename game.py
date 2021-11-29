@@ -9,7 +9,7 @@ class Game:
 
     def __init__(self, players, board_size=[7,7]):
 
-        self.players = {i+1: players[i] for i in range(len(players))}
+        self.players = {i+1: player for i, player in enumerate(players)}
         self.board_size = board_size
         self.board_len = self.board_size[0]
 
