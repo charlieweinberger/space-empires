@@ -8,7 +8,7 @@ class Player:
         self.home_colony = None
         self.ships = []
         self.strategy = strategy
-        
+        self.cp = 0
         self.strategy.player = self
 
     def get_opponent_player_number(self):
@@ -20,3 +20,6 @@ class Player:
 
     def choose_target(self, ship_info, combat_order):
         return self.strategy.choose_target(ship_info, combat_order)
+    
+    def buy_ships(self, cp_budget):
+        return self.strategy.buy_ships(cp_budget)

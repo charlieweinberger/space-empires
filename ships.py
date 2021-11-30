@@ -20,7 +20,7 @@ class Scout(Ship):
         self.df = 0
         self.hp = 1
         self.cp_cost = 6
-
+return {'Scout':3, 'BattleCruiser':3}
 class BattleCruiser(Ship):
     
     def __init__(self, player_num, ship_num, initial_coords):

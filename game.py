@@ -1,6 +1,6 @@
 import random, sys
-
 sys.path.append('logs')
+from ship_info import *
 from ships import *
 from colony import *
 from logger import *
@@ -37,6 +37,31 @@ class Game:
         
         return in_bounds_translations
 
+    def ship_obj_from_name(self, ship_name, player_num, ship_num, coords):
+        
+        ship_map = {
+            'Scout': Scout(player_num, ship_num, coords),
+            'BattleCruiser': BattleCruiser(player_num, ship_num, coords),
+            'Cruiser': Cruiser(player_num, ship_num, coords),
+            'Destroyer': Destroyer(player_num, ship_num, coords),
+            'Dreadnaught': Dreadnaught(player_num, ship_num, coords)
+        }
+        
+        if ship_name in ship_map:
+            return ship_map[ship_name]
+
+        print('invalid ship name')
+    
+    # check cost method
+
+    def cost(self, player_ships):
+        total = 0
+        for name in player_ships:
+            for ship_info in all_ship_infos:
+                if name == ship_info['name']:
+                    total += player_ships[name] * ship_info['cp_cost']
+        return total
+
     def set_up_game(self):
 
         for i, player in self.players.items():
@@ -49,21 +74,40 @@ class Game:
         self.logger.write('SETTING UP GAME...')
 
         for i, coords in ship_coords.items():
-
+ 
             self.logger.write(f'\nPLAYER {i} STARTING AT {coords}')
-
-            ships = [Scout(i, j + 1, coords) for j in range(3)] + [BattleCruiser(i, j + 1, coords) for j in range(3)]
-            self.board[coords]  += ships.copy()
-            self.players[i].ships = ships.copy()
 
             home_colony = Colony(i, coords)
             home_colony.is_home_colony = True
-            self.board[coords].append(home_colony)
+            self.add_to_board(home_colony, coords)
             self.players[i].home_colony = home_colony
-        
+
+            player.cp = 200
+            player_ships = self.players[i].buy_ships(player.cp)
+            player_ships_cost = self.cost(player_ships)
+            
+            if player_ships_cost > player.cp:
+                print(f'Player {i} went over budget')
+                continue
+            
+            player.cp -= player_ships_cost
+
+            for ship_name, value in player_ships.items():
+                for j in range(value):
+            
+                    ship = self.ship_obj_from_name(ship_name, i, j+1, coords)
+            
+                    if ship == None: continue
+                    
+                    self.add_to_board(ship.copy(), coords)
+                    self.players[i].ships.append(ship.copy())
+
         self.logger.write('\n')
 
         self.update_simple_boards()
+
+    def add_to_board(self, obj, coords):
+        self.board[coords].append(obj)
 
     def update_simple_boards(self):
         simple_board = {key:[obj.__dict__ for obj in self.board[key]] for key in self.board}
