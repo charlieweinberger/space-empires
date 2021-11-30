@@ -1,4 +1,5 @@
-import random, math
+import random, math, sys
+sys.path.append('')
 from ship_info import *
 
 class MoveToOpponent:
@@ -44,15 +45,15 @@ class MoveToOpponent:
     def buy_ships(self, cp_budget):
         
         return {'Scout': 3, 'BattleCruiser': 3}
-
-        # all_ship_names = str([ship['name'] for name in all_ship_infos])[1:-2]
+        
+        # all_ship_names = str(all_ship_infos_dict)[1:-1]
 
         # player_wants_more_ships = True
         # player_ships = {}
         
         # while player_wants_more_ships:
             
-        #     ship_name = input(f'What ship do you want? \nOptions: {all_ship_names}, none')
+        #     ship_name = input(f'Ship options: {all_ship_names}, none\nWhat ship do you want? ')
             
         #     if ship_name == 'none':
         #         player_wants_more_ships = False
@@ -62,6 +63,8 @@ class MoveToOpponent:
         #         print('That is not a ship!')
             
         #     else:
-        #         player_ships[ship_name] = int(input('How many of that ship do you want?'))
+        #         player_ships[ship_name] = int(input('How many of that ship do you want? '))
+
+        # print(f'\n your ships: {player_ships}\n')
 
         # return player_ships

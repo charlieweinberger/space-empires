@@ -1,7 +1,7 @@
 class Ship:
     
     def __init__(self):
-        self.obj_type = 'Ship'
+        pass
     
     def ship_id(self):
         return f'{self.player_num} {self.name} {self.ship_num}'
@@ -14,13 +14,14 @@ class Scout(Ship):
         self.ship_num = ship_num
         self.coords = initial_coords
 
+        self.obj_type = 'Ship'
         self.name = 'Scout'
         self.ship_class = 'E'
         self.atk = 3
         self.df = 0
         self.hp = 1
         self.cp_cost = 6
-return {'Scout':3, 'BattleCruiser':3}
+
 class BattleCruiser(Ship):
     
     def __init__(self, player_num, ship_num, initial_coords):
@@ -29,6 +30,7 @@ class BattleCruiser(Ship):
         self.ship_num = ship_num
         self.coords = initial_coords
 
+        self.obj_type = 'Ship'
         self.name = 'BattleCruiser'
         self.ship_class = 'B'
         self.atk = 5
@@ -36,16 +38,33 @@ class BattleCruiser(Ship):
         self.hp = 2
         self.cp_cost = 15
 
+class Battleship(Ship):
+    
+    def __init__(self, player_num, ship_num, initial_coords):
+
+        self.player_num = player_num
+        self.ship_num = ship_num
+        self.coords = initial_coords
+
+        self.obj_type = 'Ship'
+        self.name = 'Battleship'
+        self.ship_class = 'A'
+        self.atk = 5
+        self.df = 2
+        self.hp = 3
+        self.cp_cost = 20
+
 class Cruiser(Ship):
 
     def __init__(self, player_num, ship_num, initial_coords):
 
         self.player_num = player_num
         self.ship_num = ship_num
-        self.coords = init_coords
+        self.coords = initial_coords
 
-        self.name = "Cruiser"
-        self.ship_class = "C"
+        self.obj_type = 'Ship'
+        self.name = 'Cruiser'
+        self.ship_class = 'C'
         self.atk = 4
         self.df = 1
         self.hp = 2
@@ -57,10 +76,11 @@ class Destroyer(Ship):
         
         self.player_num = player_num
         self.ship_num = ship_num
-        self.coords = init_coords
+        self.coords = initial_coords
 
-        self.name = "Destroyer"
-        self.ship_class = "D"
+        self.obj_type = 'Ship'
+        self.name = 'Destroyer'
+        self.ship_class = 'D'
         self.atk = 4
         self.df = 0
         self.hp = 1
@@ -74,8 +94,9 @@ class Dreadnaught(Ship):
         self.ship_num = ship_num
         self.coords = initial_coords
 
-        self.name = "Dreadnaught"
-        self.ship_class = "A"
+        self.obj_type = 'Ship'
+        self.name = 'Dreadnaught'
+        self.ship_class = 'A'
         self.atk = 6
         self.df = 3
         self.hp = 3

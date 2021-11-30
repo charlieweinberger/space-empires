@@ -57,8 +57,8 @@ class Game:
     def cost(self, player_ships):
         total = 0
         for name in player_ships:
-            for ship_info in all_ship_infos:
-                if name == ship_info['name']:
+            for ship_name, ship_info in all_ship_infos_dict.items():
+                if name == ship_name:
                     total += player_ships[name] * ship_info['cp_cost']
         return total
 
@@ -95,12 +95,12 @@ class Game:
             for ship_name, value in player_ships.items():
                 for j in range(value):
             
-                    ship = self.ship_obj_from_name(ship_name, i, j+1, coords)
-            
+                    ship = all_ship_infos_dict[ship_name]['obj'](i, j+1, coords)
+
                     if ship == None: continue
-                    
-                    self.add_to_board(ship.copy(), coords)
-                    self.players[i].ships.append(ship.copy())
+
+                    self.add_to_board(ship, coords)
+                    self.players[i].ships.append(ship)
 
         self.logger.write('\n')
 
