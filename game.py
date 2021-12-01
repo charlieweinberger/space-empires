@@ -36,30 +36,13 @@ class Game:
                 in_bounds_translations.append(translation)
         
         return in_bounds_translations
-
-    def ship_obj_from_name(self, ship_name, player_num, ship_num, coords):
-        
-        ship_map = {
-            'Scout': Scout(player_num, ship_num, coords),
-            'BattleCruiser': BattleCruiser(player_num, ship_num, coords),
-            'Cruiser': Cruiser(player_num, ship_num, coords),
-            'Destroyer': Destroyer(player_num, ship_num, coords),
-            'Dreadnaught': Dreadnaught(player_num, ship_num, coords)
-        }
-        
-        if ship_name in ship_map:
-            return ship_map[ship_name]
-
-        print('invalid ship name')
     
-    # check cost method
-
     def cost(self, player_ships):
         total = 0
-        for name in player_ships:
+        for name, num_of_ships in player_ships.items():
             for ship_name, ship_info in all_ship_infos_dict.items():
                 if name == ship_name:
-                    total += player_ships[name] * ship_info['cp_cost']
+                    total += num_of_ships * ship_info['cp_cost']
         return total
 
     def set_up_game(self):

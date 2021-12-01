@@ -44,7 +44,8 @@ class MoveToOpponent:
             
     def buy_ships(self, cp_budget):
         
-        return {'Scout': 3, 'BattleCruiser': 3}
+        return {'Dreadnaught': 8}
+        # return {'Scout': 3, 'BattleCruiser': 3}
         
         # all_ship_names = str(all_ship_infos_dict)[1:-1]
 

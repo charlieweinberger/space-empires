@@ -6,7 +6,7 @@ from player import *
 
 winners = {1: 0, 2: 0, 'Tie': 0}
 
-for _ in range(200):
+for _ in range(100):
 
     strategies = [MoveToOpponent(), MoveToOpponent()]
 
@@ -15,4 +15,4 @@ for _ in range(200):
     game.run()
     winners[game.winner] += 1
 
-print(winners)
+print({k:f'{v}%' for k, v in winners.items()})
