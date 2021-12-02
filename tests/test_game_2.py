@@ -12,7 +12,7 @@ for _ in range(100):
 
     players = [Player(strategy) for strategy in strategies]
     game = Game(players)
-    game.run()
+    game.run_to_completion()
     winners[game.winner] += 1
 
 print({k:f'{v}%' for k, v in winners.items()})

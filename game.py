@@ -7,11 +7,11 @@ from logger import *
 
 class Game:
 
-    def __init__(self, players, board_size=[7,7]):
+    def __init__(self, players, board_len=7, max_turns=100):
 
         self.players = {i+1: player for i, player in enumerate(players)}
-        self.board_size = board_size
-        self.board_len = self.board_size[0]
+        self.board_len = board_len
+        self.max_turns = max_turns
 
         self.logger = Logger('/workspace/space-empires/logs/logs.txt')
         self.logger.clear_log()
@@ -232,12 +232,17 @@ class Game:
 
         self.logger.write(f'\nEND OF TURN {self.turn} COMBAT PHASE\n')
 
-    def run(self, f = lambda x: True):
-        while self.winner == None and f(self):
+    def run_to_completion(self):
+        
+        while self.winner == None and self.turn < self.max_turns:
             self.complete_movement_phase()
             self.complete_combat_phase()
             self.check_for_winner()
             self.turn += 1
+        
+        if self.winner == None:
+            self.logger.write('\nTIE GAME')
+            self.winner = 'Tie'
 
     def check_for_winner(self):
 
