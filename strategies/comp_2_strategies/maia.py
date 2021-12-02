@@ -137,6 +137,8 @@ class Maia () :
             if mvmt == (0,0) :
                 if (0,0) in choices :
                     choices.remove((0,0))
+                if choices == [] :
+                    return (0,0)
                 mvmt = choices[0]
 
             new_coords = (coords[0]+mvmt[0], coords[1]+mvmt[1])

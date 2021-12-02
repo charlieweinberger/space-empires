@@ -1,7 +1,7 @@
 import sys
-sys.path.append('ver_3')
+sys.path.append('')
 import math,random
-from ship_data import *
+from ship_info import *
 
 class William:
   def __init__(self):

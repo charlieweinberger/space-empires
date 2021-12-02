@@ -51,8 +51,8 @@ class Game:
             player.player_num = i
 
         mid = self.board_len // 2
-        ship_coords = {1: (0, mid),
-                       2: (self.board_len-1, mid)}
+        ship_coords = {1: (mid, 0),
+                       2: (mid, self.board_len-1)}
 
         self.logger.write('SETTING UP GAME...')
 

@@ -1,5 +1,7 @@
 import math, random
-from ship_data import *
+import sys
+sys.path.append('')
+from ship_info import *
 
 class Cayden():
     def __init__(self):
