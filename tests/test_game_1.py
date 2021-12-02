@@ -31,5 +31,4 @@ for key, val in winners.items():
     print(f'{key} wins: {100 * val / sum(winners.values())}%')
 
 # works with cayden and maia
-# I beat Justin by a lot
-# Anton and William beat me by a little bit
+# Anton, Justin, William beat me by a little bit
