@@ -21,54 +21,7 @@ class Scout(Ship):
         self.df = 0
         self.hp = 1
         self.cp_cost = 6
-
-class BattleCruiser(Ship):
-    
-    def __init__(self, player_num, ship_num, initial_coords):
-        
-        self.player_num = player_num
-        self.ship_num = ship_num
-        self.coords = initial_coords
-
-        self.obj_type = 'Ship'
-        self.name = 'BattleCruiser'
-        self.ship_class = 'B'
-        self.atk = 5
-        self.df = 1
-        self.hp = 2
-        self.cp_cost = 15
-
-class Battleship(Ship):
-    
-    def __init__(self, player_num, ship_num, initial_coords):
-
-        self.player_num = player_num
-        self.ship_num = ship_num
-        self.coords = initial_coords
-
-        self.obj_type = 'Ship'
-        self.name = 'Battleship'
-        self.ship_class = 'A'
-        self.atk = 5
-        self.df = 2
-        self.hp = 3
-        self.cp_cost = 20
-
-class Cruiser(Ship):
-
-    def __init__(self, player_num, ship_num, initial_coords):
-
-        self.player_num = player_num
-        self.ship_num = ship_num
-        self.coords = initial_coords
-
-        self.obj_type = 'Ship'
-        self.name = 'Cruiser'
-        self.ship_class = 'C'
-        self.atk = 4
-        self.df = 1
-        self.hp = 2
-        self.cp_cost = 12
+        self.maint_cost = 1
 
 class Destroyer(Ship):
     
@@ -85,6 +38,58 @@ class Destroyer(Ship):
         self.df = 0
         self.hp = 1
         self.cp_cost = 9
+        self.maint_cost = 1
+
+class Cruiser(Ship):
+
+    def __init__(self, player_num, ship_num, initial_coords):
+
+        self.player_num = player_num
+        self.ship_num = ship_num
+        self.coords = initial_coords
+
+        self.obj_type = 'Ship'
+        self.name = 'Cruiser'
+        self.ship_class = 'C'
+        self.atk = 4
+        self.df = 1
+        self.hp = 2
+        self.cp_cost = 12
+        self.maint_cost = 2
+
+class BattleCruiser(Ship):
+    
+    def __init__(self, player_num, ship_num, initial_coords):
+        
+        self.player_num = player_num
+        self.ship_num = ship_num
+        self.coords = initial_coords
+
+        self.obj_type = 'Ship'
+        self.name = 'BattleCruiser'
+        self.ship_class = 'B'
+        self.atk = 5
+        self.df = 1
+        self.hp = 2
+        self.cp_cost = 15
+        self.maint_cost = 2
+
+class Battleship(Ship):
+    
+    def __init__(self, player_num, ship_num, initial_coords):
+
+        self.player_num = player_num
+        self.ship_num = ship_num
+        self.coords = initial_coords
+
+        self.obj_type = 'Ship'
+        self.name = 'Battleship'
+        self.ship_class = 'A'
+        self.atk = 5
+        self.df = 2
+        self.hp = 3
+        self.cp_cost = 20
+        self.maint_cost = 3
 
 class Dreadnaught(Ship):
     
@@ -101,3 +106,4 @@ class Dreadnaught(Ship):
         self.df = 3
         self.hp = 3
         self.cp_cost = 24
+        self.maint_cost = 3

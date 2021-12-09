@@ -1,17 +1,20 @@
 import random, sys
 sys.path.append('logs')
-from ship_info import *
+from ship_data import *
 from ships import *
 from colony import *
 from logger import *
 
 class Game:
 
-    def __init__(self, players, board_len=7, max_turns=100):
+    def __init__(self, players, board_len=7, max_turns=100, initial_cp=150, cp_increment=10):
 
         self.players = {i+1: player for i, player in enumerate(players)}
+        
         self.board_len = board_len
         self.max_turns = max_turns
+        self.initial_cp = initial_cp
+        self.cp_increment = cp_increment
 
         self.logger = Logger('/workspace/space-empires/logs/logs.txt')
         self.logger.clear_log()
@@ -65,7 +68,7 @@ class Game:
             self.add_to_board(home_colony, coords)
             self.players[i].home_colony = home_colony
 
-            player.cp = 200
+            player.cp = self.initial_cp
             player_ships = self.players[i].buy_ships(player.cp)
             player_ships_cost = self.cost(player_ships)
             
@@ -75,10 +78,10 @@ class Game:
             
             player.cp -= player_ships_cost
 
-            for ship_name, value in player_ships.items():
-                for j in range(value):
+            for ship_name, num_of_ships in player_ships.items():
+                for j in range(num_of_ships):
             
-                    ship = all_ship_infos_dict[ship_name]['obj'](i, j+1, coords)
+                    ship = ship_objects[ship_name](i, j+1, coords)
 
                     if ship == None: continue
 
@@ -96,6 +99,7 @@ class Game:
         simple_board = {key:[obj.__dict__ for obj in self.board[key]] for key in self.board}
         for player in self.players.values():
             player.strategy.simple_board = simple_board
+        strategy.turn = self.turn
 
     def get_ships(self, coords):
         return [obj for obj in self.board[coords] if obj.obj_type == 'Ship']
@@ -232,11 +236,15 @@ class Game:
 
         self.logger.write(f'\nEND OF TURN {self.turn} COMBAT PHASE\n')
 
+    def complete_economic_phase(self):
+        pass
+
     def run_to_completion(self):
         
         while self.winner == None and self.turn < self.max_turns:
             self.complete_movement_phase()
             self.complete_combat_phase()
+            self.complete_economic_phase()            
             self.check_for_winner()
             self.turn += 1
         

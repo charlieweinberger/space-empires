@@ -1,10 +1,11 @@
 import random, math, sys
 sys.path.append('')
-from ship_info import *
+from ship_data import *
 
 class MoveToOpponent:
     def __init__(self):
         self.simple_board = None
+        self.turn = None
     
     def current_dist(self, ship_coords, choice, target_coords):
         new_point = (ship_coords[0] + choice[0], ship_coords[1] + choice[1])
