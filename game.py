@@ -43,11 +43,11 @@ class Game:
     def cost(self, player_ships):
         total = 0
         for name, num_of_ships in player_ships.items():
-            for ship_name, ship_info in all_ship_infos_dict.items():
-                if name == ship_name:
+            for ship_info in all_ships:
+                if name == ship_info['name']:
                     total += num_of_ships * ship_info['cp_cost']
-        return total
-
+        return
+    
     def set_up_game(self):
 
         for i, player in self.players.items():
@@ -127,7 +127,7 @@ class Game:
         ship.coords = new_coords
         self.board[ship.coords].append(ship)
 
-    def delete_ship(self, ship):
+    def remove_ship(self, ship):
         self.board[ship.coords].remove(ship)
         self.players[ship.player_num].ships.remove(ship)
     
@@ -223,7 +223,7 @@ class Game:
                         
                         if target.hp <= 0:
                 
-                            self.delete_ship(target)
+                            self.remove_ship(target)
                             self.logger.write(f'\t\tPlayer {target.ship_id()} was destroyed\n')
                     
                     self.update_simple_boards()
@@ -237,7 +237,21 @@ class Game:
         self.logger.write(f'\nEND OF TURN {self.turn} COMBAT PHASE\n')
 
     def complete_economic_phase(self):
-        pass
+
+        for i, player in self.players.items():
+
+            # income
+            player.cp += 10
+
+            # maintenence
+            for ship in sorted(player.ships, lambda x: x.maint_cost)[::-1]:
+                if player.cp >= ship.cp_cost:
+                    player.cp -= ship.cp_cost
+                else:
+                    self.remove_ship(ship)
+
+            # purchases
+            pass
 
     def run_to_completion(self):
         
