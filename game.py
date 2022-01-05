@@ -31,6 +31,7 @@ class Game:
         if coords == None: return []
 
         in_bounds_translations = []
+        possible_translations = [(0,0), (0,1), (0,-1), (1,0), (-1,0)]
 
         for translation in [(0,0), (0,1), (0,-1), (1,0), (-1,0)]:
 
@@ -46,7 +47,7 @@ class Game:
             for ship_info in all_ships:
                 if name == ship_info['name']:
                     total += num_of_ships * ship_info['cp_cost']
-        return
+        return total
     
     def set_up_game(self):
 
@@ -69,7 +70,7 @@ class Game:
             self.players[i].home_colony = home_colony
 
             player.cp = self.initial_cp
-            player_ships = self.players[i].buy_ships(player.cp)
+            player_ships = self.players[i].strategy.buy_ships(player.cp)
             player_ships_cost = self.cost(player_ships)
             
             if player_ships_cost > player.cp:
@@ -96,10 +97,12 @@ class Game:
         self.board[coords].append(obj)
 
     def update_simple_boards(self):
+        
         simple_board = {key:[obj.__dict__ for obj in self.board[key]] for key in self.board}
         for player in self.players.values():
             player.strategy.simple_board = simple_board
-        strategy.turn = self.turn
+        
+        player.strategy.turn = self.turn
 
     def get_ships(self, coords):
         return [obj for obj in self.board[coords] if obj.obj_type == 'Ship']
@@ -163,7 +166,7 @@ class Game:
 
                 current_coords = ship.coords
                 in_bounds_translations = self.get_in_bounds_translations(current_coords)
-                translation = player.choose_translation(ship, in_bounds_translations)
+                translation = player.strategy.choose_translation(ship.__dict__, in_bounds_translations)
                 new_coords = self.translate(current_coords, translation)
 
                 if new_coords not in self.board.keys():
@@ -210,7 +213,7 @@ class Game:
                 
                     if len(opponent_ships) == 0: continue
                     
-                    target_info = player.choose_target(ship.__dict__, [ship.__dict__ for ship in combat_order])
+                    target_info = player.strategy.choose_target(ship.__dict__, [ship.__dict__ for ship in combat_order])
                     target = self.obj_from_info(target_info)
                 
                     if target not in opponent_ships: continue
@@ -244,7 +247,7 @@ class Game:
             player.cp += 10
 
             # maintenence
-            for ship in sorted(player.ships, lambda x: x.maint_cost)[::-1]:
+            for ship in sorted(player.ships, key = lambda x: x.maint_cost)[::-1]:
                 if player.cp >= ship.cp_cost:
                     player.cp -= ship.cp_cost
                 else:
