@@ -33,7 +33,7 @@ class Game:
         in_bounds_translations = []
         possible_translations = [(0,0), (0,1), (0,-1), (1,0), (-1,0)]
 
-        for translation in [(0,0), (0,1), (0,-1), (1,0), (-1,0)]:
+        for translation in possible_translations:
 
             new_x, new_y = self.translate(coords, translation)
             if 0 <= new_x <= self.board_len-1 and 0 <= new_y <= self.board_len-1:
@@ -97,12 +97,9 @@ class Game:
         self.board[coords].append(obj)
 
     def update_simple_boards(self):
-        
-        simple_board = {key:[obj.__dict__ for obj in self.board[key]] for key in self.board}
         for player in self.players.values():
-            player.strategy.simple_board = simple_board
-        
-        player.strategy.turn = self.turn
+            player.strategy.simple_board = {key:[obj.__dict__ for obj in value] for key, value in self.board.items()}
+            player.strategy.turn = int(self.turn)
 
     def get_ships(self, coords):
         return [obj for obj in self.board[coords] if obj.obj_type == 'Ship']
@@ -241,20 +238,20 @@ class Game:
 
     def complete_economic_phase(self):
 
-        for i, player in self.players.items():
+        for player in self.players.values():
 
             # income
             player.cp += 10
 
             # maintenence
-            for ship in sorted(player.ships, key = lambda x: x.maint_cost)[::-1]:
+            for ship in sorted(player.ships, key=lambda x: x.maint_cost, reverse=True):
                 if player.cp >= ship.cp_cost:
                     player.cp -= ship.cp_cost
                 else:
                     self.remove_ship(ship)
 
             # purchases
-            pass
+            player.strategy.buy_ships(player.cp)
 
     def run_to_completion(self):
         
