@@ -65,7 +65,6 @@ class Game:
             self.logger.write(f'\nPLAYER {i} STARTING AT {coords}')
 
             home_colony = Colony(i, coords)
-            home_colony.is_home_colony = True
             self.add_to_board(home_colony, coords)
             self.players[i].home_colony = home_colony
 

@@ -16,7 +16,7 @@ class MoveToOpponent:
         if choices != []:
             
             min_choice = None
-            min_distance = 99999999
+            min_distance = 999
 
             for choice in choices:
 
