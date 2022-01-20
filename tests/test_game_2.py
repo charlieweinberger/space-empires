@@ -5,8 +5,9 @@ from game import *
 from player import *
 
 winners = {1: 0, 2: 0, 'Tie': 0}
+num_iterations = 1
 
-for _ in range(100):
+for _ in range(num_iterations):
 
     strategies = [MoveToOpponent(), MoveToOpponent()]
 
@@ -15,4 +16,4 @@ for _ in range(100):
     game.run_to_completion()
     winners[game.winner] += 1
 
-print({k:f'{v}%' for k, v in winners.items()})
+print({k:f'{v*100/num_iterations}%' for k, v in winners.items()})

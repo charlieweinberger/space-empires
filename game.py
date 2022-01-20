@@ -64,7 +64,7 @@ class Game:
  
             self.logger.write(f'\nPLAYER {i} STARTING AT {coords}')
 
-            home_colony = Colony(i, coords)
+            home_colony = Colony(i, coords, True)
             self.add_to_board(home_colony, coords)
             self.players[i].home_colony = home_colony
 
@@ -147,7 +147,8 @@ class Game:
     def complete_movement_phase(self):
 
         self.logger.write(f'\nBEGINNING OF TURN {self.turn} MOVEMENT PHASE\n\n')
-        
+        self.logger.write(f'\nBEGINNING OF TURN {self.turn} MOVEMENT PHASE\n\n')
+
         for player in self.players.values():
 
             if len(player.ships) == 0:
@@ -237,7 +238,12 @@ class Game:
 
     def complete_economic_phase(self):
 
+        self.logger.write(f'\nSTART OF TURN {self.turn} ECONOMIC PHASE\n')
+
         for player in self.players.values():
+
+            self.logger.write(f'\n\tPLAYER {player.player_number}:\n')
+            self.logger.write(f'\t\tPLAYER CP: {player.cp}\n')
 
             # income
             player.cp += 10
@@ -248,16 +254,28 @@ class Game:
                     player.cp -= ship.cp_cost
                 else:
                     self.remove_ship(ship)
+                    self.logger.write(f'\n\t\t{ship.id()} SHIP REMOVED\n')
 
             # purchases
             player.strategy.buy_ships(player.cp)
+            self.logger.write(f'\t\tPLAYER CP: {player.cp}\n')
+
+        self.logger.write(f'\nEND OF TURN {self.turn} ECONOMIC PHASE\n')
+
+    ##################################################
+
+    
+
+    ##################################################
 
     def run_to_completion(self):
         
         while self.winner == None and self.turn < self.max_turns:
             self.complete_movement_phase()
             self.complete_combat_phase()
+            self.logger.write(f'\n PLAYER 1 SHIPS: {self.player[1].ships}\n')
             self.complete_economic_phase()            
+            self.logger.write(f'\n PLAYER 1 SHIPS: {self.player[1].ships}\n')
             self.check_for_winner()
             self.turn += 1
         

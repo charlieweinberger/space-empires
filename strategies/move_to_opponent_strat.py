@@ -6,10 +6,6 @@ class MoveToOpponent:
     def __init__(self):
         self.simple_board = None
         self.turn = None
-    
-    def current_dist(self, ship_coords, choice, target_coords):
-        new_point = (ship_coords[0] + choice[0], ship_coords[1] + choice[1])
-        return math.dist(new_point, target_coords)
 
     def min_distance_translation(self, ship_info, choices, target_coords):
 
@@ -20,7 +16,8 @@ class MoveToOpponent:
 
             for choice in choices:
 
-                distance = self.current_dist(ship_info['coords'], choice, target_coords)
+                new_point = [a + b for a, b in zip(ship_info['coords'], choice)]
+                distance = math.dist(new_point, target_coords)
 
                 if distance < min_distance:
                     min_distance = distance
@@ -35,9 +32,9 @@ class MoveToOpponent:
                     return key
 
     def choose_translation(self, ship_info, choices):
-        opponent_home_colony_coords = self.get_opponent_home_colony_coords(ship_info)
-        return self.min_distance_translation(ship_info, choices, opponent_home_colony_coords)
-        
+        target_coords = self.get_opponent_home_colony_coords(ship_info)
+        return self.min_distance_translation(ship_info, choices, target_coords)
+  
     def choose_target(self, ship_info, simplified_combat_order):
         for info in simplified_combat_order:
             if info['player_num'] != ship_info['player_num']:
@@ -45,7 +42,10 @@ class MoveToOpponent:
             
     def buy_ships(self, cp_budget):
         
-        return {'Scout': 3, 'BattleCruiser': 3}
+        if self.turn == None:
+            return {'Scout': 3, 'BattleCruiser': 3}
+        else:
+            return {'Scout': 1}
         
         # all_ship_names = str(all_ship_infos_dict)[1:-1]
 
