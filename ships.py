@@ -4,7 +4,7 @@ class Ship:
         pass
     
     def ship_id(self):
-        return f'{self.player_num} {self.name} {self.ship_num}'
+        return f'PLAYER {self.player_num} {self.name} {self.ship_num}'
 
 class Scout(Ship):
     

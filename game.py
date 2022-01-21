@@ -52,7 +52,7 @@ class Game:
     def set_up_game(self):
 
         for i, player in self.players.items():
-            player.player_num = i
+            player.set_player_num(i)
 
         mid = self.board_len // 2
         ship_coords = {1: (mid, 0),
@@ -121,7 +121,7 @@ class Game:
                 return obj
 
     def move_ship(self, ship, new_coords):
-        self.logger.write(f'\t\tPLAYER {ship.ship_id()}: {ship.coords} -> {new_coords}\n')
+        self.logger.write(f'\t\t{ship.ship_id()}: {ship.coords} -> {new_coords}\n')
         self.board[ship.coords].remove(ship)
         ship.coords = new_coords
         self.board[ship.coords].append(ship)
@@ -130,10 +130,15 @@ class Game:
         self.board[ship.coords].remove(ship)
         self.players[ship.player_num].ships.remove(ship)
     
+    def get_ship_num(self, player, input_ship_name):
+        for ship_name, num_of_ship in player.ship_counter.items():
+            if key == input_ship_name:
+                return num_of_ship + 1
+
     def hit(self, attacker, defender):
 
-        self.logger.write(f'\n\t\tAttacker: Player {attacker.ship_id()}\n')
-        self.logger.write(f'\t\tDefender: Player {defender.ship_id()}\n')
+        self.logger.write(f'\n\t\tAttacker: {attacker.ship_id()}\n')
+        self.logger.write(f'\t\tDefender: {defender.ship_id()}\n')
 
         if attacker.hp > 0 and defender.hp > 0 and attacker.player_num != defender.player_num:
             
@@ -152,10 +157,10 @@ class Game:
         for player in self.players.values():
 
             if len(player.ships) == 0:
-                self.logger.write(f'\tPLAYER {player.player_num} HAS NO SHIPS\n\n')
+                self.logger.write(f'\t{player.player_id} HAS NO SHIPS\n\n')
                 continue
 
-            self.logger.write(f'\tPLAYER {player.player_num} MOVING:\n')
+            self.logger.write(f'\t{player.player_id} MOVING:\n')
 
             for ship in player.ships:
 
@@ -167,7 +172,7 @@ class Game:
                 new_coords = self.translate(current_coords, translation)
 
                 if new_coords not in self.board.keys():
-                    self.logger.write(f'\t\tPlayer {ship.ship_id()} tried to make an invalid move: {translation}\n')
+                    self.logger.write(f'\t\t{ship.ship_id()} tried to make an invalid move: {translation}\n')
                     continue
 
                 self.move_ship(ship, new_coords)
@@ -198,7 +203,7 @@ class Game:
 
                 self.logger.write('\n\t\tCOMBAT ORDER:\n\n')
                 for ship in combat_order:
-                    self.logger.write(f'\t\t\tPLAYER {ship.ship_id()} \n')
+                    self.logger.write(f'\t\t\t{ship.ship_id()} \n')
 
                 for ship in combat_order:
                 
@@ -219,12 +224,12 @@ class Game:
                                         
                         target.hp -= 1
                 
-                        self.logger.write(f'\n\t\tPlayer {ship.ship_id()} dealt 1 dmg to Player {target.ship_id()}\n')
+                        self.logger.write(f'\n\t\t{ship.ship_id()} dealt 1 dmg to {target.ship_id()}\n')
                         
                         if target.hp <= 0:
                 
                             self.remove_ship(target)
-                            self.logger.write(f'\t\tPlayer {target.ship_id()} was destroyed\n')
+                            self.logger.write(f'\t\t{target.ship_id()} was destroyed\n')
                     
                     self.update_simple_boards()
 
@@ -242,31 +247,53 @@ class Game:
 
         for player in self.players.values():
 
-            self.logger.write(f'\n\tPLAYER {player.player_number}:\n')
+            self.logger.write(f'\n\t{player.player_id}:\n')
             self.logger.write(f'\t\tPLAYER CP: {player.cp}\n')
 
             # income
             player.cp += 10
 
-            # maintenence
-            for ship in sorted(player.ships, key=lambda x: x.maint_cost, reverse=True):
-                if player.cp >= ship.cp_cost:
-                    player.cp -= ship.cp_cost
-                else:
-                    self.remove_ship(ship)
-                    self.logger.write(f'\n\t\t{ship.id()} SHIP REMOVED\n')
+            # maintenance
 
-            # purchases
-            player.strategy.buy_ships(player.cp)
-            self.logger.write(f'\t\tPLAYER CP: {player.cp}\n')
+            player_ships = sorted(player.ships, key=lambda x: x.maint_cost, reverse=True)
+            total_maint_cost = sum(ship.maint_cost for ship in player_ships)
+
+            if player.cp >= total_maint_cost:
+                player.cp -= total_maint_cost
+
+            else:
+                while player.cp < total_maint_cost:
+                    ship_to_delete = player_ships.pop()
+                    total_maint_cost -= ship_to_delete.maint_cost                   
+                    self.logs.write(f'\n{ship_to_delete.ship_id()} HAS BEEN REMOVED')
+                    self.remove_ship(ship_to_delete)
+
+            # purchase
+
+            wanted_ships = player.strategy.buy_ships(player.cp)
+            wanted_ships_cp = 0
+            ships_to_add = []
+
+            for wanted_ship_name, num_of_wanted_ship in wanted_ships.items():
+                for _ in range(num_of_wanted_ship):
+                    wanted_ship_num = self.get_ship_num(player, wanted_ship_name)
+                    wanted_ship = ship_objects[wanted_ship_name](player.player_num, player.home_colony.coords, wanted_ship_num)
+                    ships_to_add.append(wanted_ship)
+                    wanted_ships_cp += wanted_ship.cp_cost
+
+            if player.cp >= wanted_ships_cp:
+                
+                for ship in ships_to_add:
+                    player.ships.append(ship)
+                    player.ship_counter[ship.name] += 1
+                    self.add_to_board(ship, player.home_colony.coords)
+                    self.logs.write(f'\n{player.player_id} BOUGHT A {ship.name}')
+
+                player.cp -= wanted_ships_cp
+
+            self.logger.write(f'\t\tPLAYER HAS {player.cp} LEFTOVER\n')
 
         self.logger.write(f'\nEND OF TURN {self.turn} ECONOMIC PHASE\n')
-
-    ##################################################
-
-    
-
-    ##################################################
 
     def run_to_completion(self):
         
