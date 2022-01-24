@@ -7,7 +7,7 @@ from logger import *
 
 class Game:
 
-    def __init__(self, players, board_len=7, max_turns=1000, initial_cp=150, cp_increment=10):
+    def __init__(self, players, board_len=7, max_turns=100, initial_cp=150, cp_increment=10):
 
         self.players = {i+1: player for i, player in enumerate(players)}
         
@@ -62,7 +62,7 @@ class Game:
 
         for i, coords in ship_coords.items():
  
-            self.logger.write(f'\nPLAYER {i} STARTING AT {coords}')
+            self.logger.write(f'\n\tPLAYER {i} STARTING AT {coords}')
 
             home_colony = Colony(i, coords, True)
             self.add_to_board(home_colony, coords)
@@ -87,6 +87,7 @@ class Game:
 
                     self.add_to_board(ship, coords)
                     self.players[i].ships.append(ship)
+                    self.players[i].ship_counter[ship.name] += 1
 
         self.logger.write('\n')
 
@@ -254,10 +255,19 @@ class Game:
 
             # maintenance
 
-            self.logger.write(f'\n\t\tMAINTENANCE:\n')
+            self.logger.write(f'\n\t\tMAINTENANCE:')
+            self.logger.write(f'\n\t\t{player.cp = }\n')
 
             player_ships = sorted(player.ships, key=lambda x: x.maint_cost, reverse=True)
-            total_maint_cost = sum(ship.maint_cost for ship in player_ships)
+
+            # total_maint_cost = sum([ship.maint_cost for ship in player_ships])
+            
+            total_maint_cost = 0
+            for ship in player_ships:
+                self.logger.write(f'\n\t\t{ship.ship_id()} maint cost: {ship.maint_cost}')
+                total_maint_cost += ship.maint_cost
+
+            self.logger.write(f'\n\t\t{total_maint_cost = }\n')
 
             if player.cp >= total_maint_cost:
                 player.cp -= total_maint_cost
@@ -266,8 +276,10 @@ class Game:
                 while player.cp < total_maint_cost:
                     ship_to_delete = player_ships.pop()
                     total_maint_cost -= ship_to_delete.maint_cost                   
-                    self.logger.write(f'\n{ship_to_delete.ship_id()} HAS BEEN REMOVED')
+                    self.logger.write(f'\n\t\t{ship_to_delete.ship_id()} HAS BEEN REMOVED\n')
                     self.remove_ship(ship_to_delete)
+
+            self.logger.write(f'\n\t\tplayer.cp after maintenance: {player.cp} \n')
 
             # purchase
 
@@ -285,7 +297,7 @@ class Game:
                     wanted_ships_cp += wanted_ship.cp_cost
 
             if player.cp >= wanted_ships_cp:
-                
+
                 for ship in ships_to_add:
                     player.ships.append(ship)
                     player.ship_counter[ship.name] += 1
@@ -294,12 +306,13 @@ class Game:
 
                 player.cp -= wanted_ships_cp
 
+
             self.logger.write(f'\n\t\tPLAYER HAS {player.cp} LEFTOVER\n')
 
         self.logger.write(f'\nEND OF TURN {self.turn} ECONOMIC PHASE\n')
 
     def run_to_completion(self):
-        
+
         while self.winner == None and self.turn < self.max_turns:
             self.complete_movement_phase()
             self.complete_combat_phase()

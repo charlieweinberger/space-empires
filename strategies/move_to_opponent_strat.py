@@ -39,14 +39,14 @@ class MoveToOpponent:
         for info in simplified_combat_order:
             if info['player_num'] != ship_info['player_num']:
                 return info
-            
+
     def buy_ships(self, cp_budget):
-        
+
         if self.turn == None:
             return {'Scout': 3, 'BattleCruiser': 3}
         else:
             return {'Scout': 1}
-        
+
         # all_ship_names = str(all_ship_infos_dict)[1:-1]
 
         # player_wants_more_ships = True
