@@ -5,7 +5,7 @@ from game import *
 from player import *
 
 winners = {1: 0, 2: 0, 'Tie': 0}
-num_iterations = 1
+num_iterations = 100
 
 for _ in range(num_iterations):
 

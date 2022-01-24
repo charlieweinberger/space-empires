@@ -4,9 +4,6 @@ PLAYER 2 STARTING AT (3, 6)
 
 BEGINNING OF TURN 1 MOVEMENT PHASE
 
-
-BEGINNING OF TURN 1 MOVEMENT PHASE
-
 	PLAYER 1 MOVING:
 		PLAYER 1 Scout 1: (3, 0) -> (3, 1)
 		PLAYER 1 Scout 2: (3, 0) -> (3, 1)
@@ -27,19 +24,44 @@ END OF TURN 1 MOVEMENT PHASE
 
 BEGINNING OF TURN 1 COMBAT PHASE
 
- PLAYER 1 SHIPS: [<ships.Scout object at 0x7f8539c2cfa0>, <ships.Scout object at 0x7f8539c2cf70>, <ships.Scout object at 0x7f8539b99040>, <ships.BattleCruiser object at 0x7f8539c2cfd0>, <ships.BattleCruiser object at 0x7f8539b990a0>, <ships.BattleCruiser object at 0x7f8539b990d0>]
-
 END OF TURN 1 COMBAT PHASE
 
- PLAYER 1 SHIPS: [<ships.Scout object at 0x7f8539c2cfa0>, <ships.Scout object at 0x7f8539c2cf70>, <ships.Scout object at 0x7f8539b99040>, <ships.BattleCruiser object at 0x7f8539c2cfd0>, <ships.BattleCruiser object at 0x7f8539b990a0>, <ships.BattleCruiser object at 0x7f8539b990d0>]
+START OF TURN 1 ECONOMIC PHASE
 
-BEGINNING OF TURN 2 MOVEMENT PHASE
+	PLAYER 1:
 
+		CP: 87
+
+		MAINTENANCE:
+
+		PURCHASES:
+		PLAYER 1 BOUGHT A Scout
+
+		PLAYER HAS 82 LEFTOVER
+
+	PLAYER 2:
+
+		CP: 87
+
+		MAINTENANCE:
+
+		PURCHASES:
+		PLAYER 2 BOUGHT A Scout
+
+		PLAYER HAS 82 LEFTOVER
+
+END OF TURN 1 ECONOMIC PHASE
 
 BEGINNING OF TURN 2 MOVEMENT PHASE
 
 	PLAYER 1 MOVING:
 		PLAYER 1 Scout 1: (3, 1) -> (3, 2)
+		PLAYER 1 Scout 2: (3, 1) -> (3, 2)
+		PLAYER 1 Scout 3: (3, 1) -> (3, 2)
+		PLAYER 1 BattleCruiser 1: (3, 1) -> (3, 2)
+		PLAYER 1 BattleCruiser 2: (3, 1) -> (3, 2)
+		PLAYER 1 BattleCruiser 3: (3, 1) -> (3, 2)
+		PLAYER 1 Scout 1: (3, 0) -> (3, 1)
 
 	PLAYER 2 MOVING:
 		PLAYER 2 Scout 1: (3, 5) -> (3, 4)
@@ -48,117 +70,713 @@ BEGINNING OF TURN 2 MOVEMENT PHASE
 		PLAYER 2 BattleCruiser 1: (3, 5) -> (3, 4)
 		PLAYER 2 BattleCruiser 2: (3, 5) -> (3, 4)
 		PLAYER 2 BattleCruiser 3: (3, 5) -> (3, 4)
+		PLAYER 2 Scout 1: (3, 6) -> (3, 5)
 
 END OF TURN 2 MOVEMENT PHASE
 
 BEGINNING OF TURN 2 COMBAT PHASE
 
- PLAYER 1 SHIPS: [<ships.Scout object at 0x7f8539c2cfa0>]
-
 END OF TURN 2 COMBAT PHASE
 
- PLAYER 1 SHIPS: [<ships.Scout object at 0x7f8539c2cfa0>]
+START OF TURN 2 ECONOMIC PHASE
 
-BEGINNING OF TURN 3 MOVEMENT PHASE
+	PLAYER 1:
 
+		CP: 82
+
+		MAINTENANCE:
+
+		PURCHASES:
+		PLAYER 1 BOUGHT A Scout
+
+		PLAYER HAS 76 LEFTOVER
+
+	PLAYER 2:
+
+		CP: 82
+
+		MAINTENANCE:
+
+		PURCHASES:
+		PLAYER 2 BOUGHT A Scout
+
+		PLAYER HAS 76 LEFTOVER
+
+END OF TURN 2 ECONOMIC PHASE
 
 BEGINNING OF TURN 3 MOVEMENT PHASE
 
 	PLAYER 1 MOVING:
 		PLAYER 1 Scout 1: (3, 2) -> (3, 3)
+		PLAYER 1 Scout 2: (3, 2) -> (3, 3)
+		PLAYER 1 Scout 3: (3, 2) -> (3, 3)
+		PLAYER 1 BattleCruiser 1: (3, 2) -> (3, 3)
+		PLAYER 1 BattleCruiser 2: (3, 2) -> (3, 3)
+		PLAYER 1 BattleCruiser 3: (3, 2) -> (3, 3)
+		PLAYER 1 Scout 1: (3, 1) -> (3, 2)
+		PLAYER 1 Scout 2: (3, 0) -> (3, 1)
 
 	PLAYER 2 MOVING:
 		PLAYER 2 Scout 1: (3, 4) -> (3, 3)
 		PLAYER 2 Scout 2: (3, 4) -> (3, 3)
+		PLAYER 2 Scout 3: (3, 4) -> (3, 3)
 		PLAYER 2 BattleCruiser 1: (3, 4) -> (3, 3)
 		PLAYER 2 BattleCruiser 2: (3, 4) -> (3, 3)
+		PLAYER 2 BattleCruiser 3: (3, 4) -> (3, 3)
+		PLAYER 2 Scout 1: (3, 5) -> (3, 4)
+		PLAYER 2 Scout 2: (3, 6) -> (3, 5)
 
 END OF TURN 3 MOVEMENT PHASE
 
 BEGINNING OF TURN 3 COMBAT PHASE
 
- PLAYER 1 SHIPS: [<ships.Scout object at 0x7f8539c2cfa0>]
+	COMBAT AT (3, 3):
+
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 1 
+			PLAYER 1 BattleCruiser 2 
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 2 BattleCruiser 1 
+			PLAYER 2 BattleCruiser 2 
+			PLAYER 2 BattleCruiser 3 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 1 
+			PLAYER 2 Scout 2 
+			PLAYER 2 Scout 3 
+
+		Attacker: PLAYER 1 BattleCruiser 1
+		Defender: PLAYER 2 BattleCruiser 1
+		HIT!
+
+		PLAYER 1 BattleCruiser 1 dealt 1 dmg to PLAYER 2 BattleCruiser 1
+
+		Attacker: PLAYER 1 BattleCruiser 2
+		Defender: PLAYER 2 BattleCruiser 1
+		HIT!
+
+		PLAYER 1 BattleCruiser 2 dealt 1 dmg to PLAYER 2 BattleCruiser 1
+		PLAYER 2 BattleCruiser 1 was destroyed
+
+		Attacker: PLAYER 2 BattleCruiser 2
+		Defender: PLAYER 1 BattleCruiser 1
+		(MISS)
+
+		Attacker: PLAYER 2 BattleCruiser 3
+		Defender: PLAYER 1 BattleCruiser 1
+		(MISS)
+
+		Attacker: PLAYER 2 Scout 1
+		Defender: PLAYER 1 BattleCruiser 1
+		HIT!
+
+		PLAYER 2 Scout 1 dealt 1 dmg to PLAYER 1 BattleCruiser 1
+
+		Attacker: PLAYER 2 Scout 2
+		Defender: PLAYER 1 BattleCruiser 1
+		HIT!
+
+		PLAYER 2 Scout 2 dealt 1 dmg to PLAYER 1 BattleCruiser 1
+		PLAYER 1 BattleCruiser 1 was destroyed
 
 	COMBAT AT (3, 3):
 
 		COMBAT ORDER:
 
-			PLAYER 2 BattleCruiser 1 
+			PLAYER 1 BattleCruiser 2 
+			PLAYER 1 BattleCruiser 3 
 			PLAYER 2 BattleCruiser 2 
+			PLAYER 2 BattleCruiser 3 
 			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
 			PLAYER 2 Scout 1 
 			PLAYER 2 Scout 2 
+			PLAYER 2 Scout 3 
 
-		Attacker: Player 2 BattleCruiser 1
-		Defender: Player 1 Scout 1
+		Attacker: PLAYER 1 BattleCruiser 2
+		Defender: PLAYER 2 BattleCruiser 2
+		(MISS)
+
+		Attacker: PLAYER 1 BattleCruiser 3
+		Defender: PLAYER 2 BattleCruiser 2
+		(MISS)
+
+		Attacker: PLAYER 2 BattleCruiser 2
+		Defender: PLAYER 1 BattleCruiser 2
+		(MISS)
+
+		Attacker: PLAYER 2 BattleCruiser 3
+		Defender: PLAYER 1 BattleCruiser 2
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 1
+		Defender: PLAYER 2 BattleCruiser 2
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 2
+		Defender: PLAYER 2 BattleCruiser 2
 		HIT!
 
-		Player 2 BattleCruiser 1 dealt 1 dmg to Player 1 Scout 1
-		Player 1 Scout 1 was destroyed
+		PLAYER 1 Scout 2 dealt 1 dmg to PLAYER 2 BattleCruiser 2
+
+		Attacker: PLAYER 1 Scout 3
+		Defender: PLAYER 2 BattleCruiser 2
+		(MISS)
+
+		Attacker: PLAYER 2 Scout 1
+		Defender: PLAYER 1 BattleCruiser 2
+		HIT!
+
+		PLAYER 2 Scout 1 dealt 1 dmg to PLAYER 1 BattleCruiser 2
+
+		Attacker: PLAYER 2 Scout 2
+		Defender: PLAYER 1 BattleCruiser 2
+		(MISS)
+
+		Attacker: PLAYER 2 Scout 3
+		Defender: PLAYER 1 BattleCruiser 2
+		(MISS)
+
+	COMBAT AT (3, 3):
+
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 2 
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 2 BattleCruiser 2 
+			PLAYER 2 BattleCruiser 3 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 1 
+			PLAYER 2 Scout 2 
+			PLAYER 2 Scout 3 
+
+		Attacker: PLAYER 1 BattleCruiser 2
+		Defender: PLAYER 2 BattleCruiser 2
+		(MISS)
+
+		Attacker: PLAYER 1 BattleCruiser 3
+		Defender: PLAYER 2 BattleCruiser 2
+		HIT!
+
+		PLAYER 1 BattleCruiser 3 dealt 1 dmg to PLAYER 2 BattleCruiser 2
+		PLAYER 2 BattleCruiser 2 was destroyed
+
+		Attacker: PLAYER 2 BattleCruiser 3
+		Defender: PLAYER 1 BattleCruiser 2
+		HIT!
+
+		PLAYER 2 BattleCruiser 3 dealt 1 dmg to PLAYER 1 BattleCruiser 2
+		PLAYER 1 BattleCruiser 2 was destroyed
+
+	COMBAT AT (3, 3):
+
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 2 BattleCruiser 3 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 1 
+			PLAYER 2 Scout 2 
+			PLAYER 2 Scout 3 
+
+		Attacker: PLAYER 1 BattleCruiser 3
+		Defender: PLAYER 2 BattleCruiser 3
+		HIT!
+
+		PLAYER 1 BattleCruiser 3 dealt 1 dmg to PLAYER 2 BattleCruiser 3
+
+		Attacker: PLAYER 2 BattleCruiser 3
+		Defender: PLAYER 1 BattleCruiser 3
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 1
+		Defender: PLAYER 2 BattleCruiser 3
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 2
+		Defender: PLAYER 2 BattleCruiser 3
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 3
+		Defender: PLAYER 2 BattleCruiser 3
+		(MISS)
+
+		Attacker: PLAYER 2 Scout 1
+		Defender: PLAYER 1 BattleCruiser 3
+		(MISS)
+
+		Attacker: PLAYER 2 Scout 2
+		Defender: PLAYER 1 BattleCruiser 3
+		(MISS)
+
+		Attacker: PLAYER 2 Scout 3
+		Defender: PLAYER 1 BattleCruiser 3
+		(MISS)
+
+	COMBAT AT (3, 3):
+
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 2 BattleCruiser 3 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 1 
+			PLAYER 2 Scout 2 
+			PLAYER 2 Scout 3 
+
+		Attacker: PLAYER 1 BattleCruiser 3
+		Defender: PLAYER 2 BattleCruiser 3
+		HIT!
+
+		PLAYER 1 BattleCruiser 3 dealt 1 dmg to PLAYER 2 BattleCruiser 3
+		PLAYER 2 BattleCruiser 3 was destroyed
+
+		Attacker: PLAYER 2 Scout 1
+		Defender: PLAYER 1 BattleCruiser 3
+		(MISS)
+
+		Attacker: PLAYER 2 Scout 2
+		Defender: PLAYER 1 BattleCruiser 3
+		HIT!
+
+		PLAYER 2 Scout 2 dealt 1 dmg to PLAYER 1 BattleCruiser 3
+
+		Attacker: PLAYER 2 Scout 3
+		Defender: PLAYER 1 BattleCruiser 3
+		(MISS)
+
+	COMBAT AT (3, 3):
+
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 1 
+			PLAYER 2 Scout 2 
+			PLAYER 2 Scout 3 
+
+		Attacker: PLAYER 1 BattleCruiser 3
+		Defender: PLAYER 2 Scout 1
+		HIT!
+
+		PLAYER 1 BattleCruiser 3 dealt 1 dmg to PLAYER 2 Scout 1
+		PLAYER 2 Scout 1 was destroyed
+
+		Attacker: PLAYER 2 Scout 2
+		Defender: PLAYER 1 BattleCruiser 3
+		(MISS)
+
+		Attacker: PLAYER 2 Scout 3
+		Defender: PLAYER 1 BattleCruiser 3
+		(MISS)
+
+	COMBAT AT (3, 3):
+
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 2 
+			PLAYER 2 Scout 3 
+
+		Attacker: PLAYER 1 BattleCruiser 3
+		Defender: PLAYER 2 Scout 2
+		HIT!
+
+		PLAYER 1 BattleCruiser 3 dealt 1 dmg to PLAYER 2 Scout 2
+		PLAYER 2 Scout 2 was destroyed
+
+		Attacker: PLAYER 2 Scout 3
+		Defender: PLAYER 1 BattleCruiser 3
+		(MISS)
+
+	COMBAT AT (3, 3):
+
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 3 
+
+		Attacker: PLAYER 1 BattleCruiser 3
+		Defender: PLAYER 2 Scout 3
+		HIT!
+
+		PLAYER 1 BattleCruiser 3 dealt 1 dmg to PLAYER 2 Scout 3
+		PLAYER 2 Scout 3 was destroyed
 
 END OF TURN 3 COMBAT PHASE
 
- PLAYER 1 SHIPS: []
+START OF TURN 3 ECONOMIC PHASE
+
+	PLAYER 1:
+
+		CP: 76
+
+		MAINTENANCE:
+
+		PURCHASES:
+		PLAYER 1 BOUGHT A Scout
+
+		PLAYER HAS 73 LEFTOVER
+
+	PLAYER 2:
+
+		CP: 76
+
+		MAINTENANCE:
+
+		PURCHASES:
+		PLAYER 2 BOUGHT A Scout
+
+		PLAYER HAS 78 LEFTOVER
+
+END OF TURN 3 ECONOMIC PHASE
 
 BEGINNING OF TURN 4 MOVEMENT PHASE
 
-
-BEGINNING OF TURN 4 MOVEMENT PHASE
-
-	PLAYER 1 HAS NO SHIPS
+	PLAYER 1 MOVING:
+		PLAYER 1 Scout 1: (3, 3) -> (3, 4)
+		PLAYER 1 Scout 2: (3, 3) -> (3, 4)
+		PLAYER 1 Scout 3: (3, 3) -> (3, 4)
+		PLAYER 1 BattleCruiser 3: (3, 3) -> (3, 4)
+		PLAYER 1 Scout 1: (3, 2) -> (3, 3)
+		PLAYER 1 Scout 2: (3, 1) -> (3, 2)
+		PLAYER 1 Scout 3: (3, 0) -> (3, 1)
 
 	PLAYER 2 MOVING:
-		PLAYER 2 Scout 1: (3, 3) -> (3, 2)
-		PLAYER 2 Scout 2: (3, 3) -> (3, 2)
+		PLAYER 2 Scout 2: (3, 5) -> (3, 4)
+		PLAYER 2 Scout 3: (3, 6) -> (3, 5)
 
 END OF TURN 4 MOVEMENT PHASE
 
 BEGINNING OF TURN 4 COMBAT PHASE
 
- PLAYER 1 SHIPS: []
+	COMBAT AT (3, 4):
+
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 2 Scout 1 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 2 
+
+		Attacker: PLAYER 1 BattleCruiser 3
+		Defender: PLAYER 2 Scout 1
+		(MISS)
+
+		Attacker: PLAYER 2 Scout 1
+		Defender: PLAYER 1 BattleCruiser 3
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 1
+		Defender: PLAYER 2 Scout 1
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 2
+		Defender: PLAYER 2 Scout 1
+		HIT!
+
+		PLAYER 1 Scout 2 dealt 1 dmg to PLAYER 2 Scout 1
+		PLAYER 2 Scout 1 was destroyed
+
+		Attacker: PLAYER 2 Scout 2
+		Defender: PLAYER 1 BattleCruiser 3
+		(MISS)
+
+	COMBAT AT (3, 4):
+
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 2 
+
+		Attacker: PLAYER 1 BattleCruiser 3
+		Defender: PLAYER 2 Scout 2
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 1
+		Defender: PLAYER 2 Scout 2
+		HIT!
+
+		PLAYER 1 Scout 1 dealt 1 dmg to PLAYER 2 Scout 2
+		PLAYER 2 Scout 2 was destroyed
 
 END OF TURN 4 COMBAT PHASE
 
- PLAYER 1 SHIPS: []
+START OF TURN 4 ECONOMIC PHASE
+
+	PLAYER 1:
+
+		CP: 73
+
+		MAINTENANCE:
+
+		PURCHASES:
+		PLAYER 1 BOUGHT A Scout
+
+		PLAYER HAS 69 LEFTOVER
+
+	PLAYER 2:
+
+		CP: 78
+
+		MAINTENANCE:
+
+		PURCHASES:
+		PLAYER 2 BOUGHT A Scout
+
+		PLAYER HAS 81 LEFTOVER
+
+END OF TURN 4 ECONOMIC PHASE
 
 BEGINNING OF TURN 5 MOVEMENT PHASE
 
-
-BEGINNING OF TURN 5 MOVEMENT PHASE
-
-	PLAYER 1 HAS NO SHIPS
+	PLAYER 1 MOVING:
+		PLAYER 1 Scout 1: (3, 4) -> (3, 5)
+		PLAYER 1 Scout 2: (3, 4) -> (3, 5)
+		PLAYER 1 Scout 3: (3, 4) -> (3, 5)
+		PLAYER 1 BattleCruiser 3: (3, 4) -> (3, 5)
+		PLAYER 1 Scout 1: (3, 3) -> (3, 4)
+		PLAYER 1 Scout 2: (3, 2) -> (3, 3)
+		PLAYER 1 Scout 3: (3, 1) -> (3, 2)
+		PLAYER 1 Scout 4: (3, 0) -> (3, 1)
 
 	PLAYER 2 MOVING:
-		PLAYER 2 Scout 1: (3, 2) -> (3, 1)
+		PLAYER 2 Scout 4: (3, 6) -> (3, 5)
 
 END OF TURN 5 MOVEMENT PHASE
 
 BEGINNING OF TURN 5 COMBAT PHASE
 
- PLAYER 1 SHIPS: []
+	COMBAT AT (3, 5):
+
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 2 Scout 3 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 4 
+
+		Attacker: PLAYER 1 BattleCruiser 3
+		Defender: PLAYER 2 Scout 3
+		(MISS)
+
+		Attacker: PLAYER 2 Scout 3
+		Defender: PLAYER 1 BattleCruiser 3
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 1
+		Defender: PLAYER 2 Scout 3
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 2
+		Defender: PLAYER 2 Scout 3
+		HIT!
+
+		PLAYER 1 Scout 2 dealt 1 dmg to PLAYER 2 Scout 3
+		PLAYER 2 Scout 3 was destroyed
+
+		Attacker: PLAYER 2 Scout 4
+		Defender: PLAYER 1 BattleCruiser 3
+		(MISS)
+
+	COMBAT AT (3, 5):
+
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+			PLAYER 2 Scout 4 
+
+		Attacker: PLAYER 1 BattleCruiser 3
+		Defender: PLAYER 2 Scout 4
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 1
+		Defender: PLAYER 2 Scout 4
+		HIT!
+
+		PLAYER 1 Scout 1 dealt 1 dmg to PLAYER 2 Scout 4
+		PLAYER 2 Scout 4 was destroyed
 
 END OF TURN 5 COMBAT PHASE
 
- PLAYER 1 SHIPS: []
+START OF TURN 5 ECONOMIC PHASE
+
+	PLAYER 1:
+
+		CP: 69
+
+		MAINTENANCE:
+
+		PURCHASES:
+		PLAYER 1 BOUGHT A Scout
+
+		PLAYER HAS 64 LEFTOVER
+
+	PLAYER 2:
+
+		CP: 81
+
+		MAINTENANCE:
+
+		PURCHASES:
+		PLAYER 2 BOUGHT A Scout
+
+		PLAYER HAS 85 LEFTOVER
+
+END OF TURN 5 ECONOMIC PHASE
 
 BEGINNING OF TURN 6 MOVEMENT PHASE
 
-
-BEGINNING OF TURN 6 MOVEMENT PHASE
-
-	PLAYER 1 HAS NO SHIPS
+	PLAYER 1 MOVING:
+		PLAYER 1 Scout 1: (3, 5) -> (3, 6)
+		PLAYER 1 Scout 2: (3, 5) -> (3, 6)
+		PLAYER 1 Scout 3: (3, 5) -> (3, 6)
+		PLAYER 1 BattleCruiser 3: (3, 5) -> (3, 6)
+		PLAYER 1 Scout 1: (3, 4) -> (3, 5)
+		PLAYER 1 Scout 2: (3, 3) -> (3, 4)
+		PLAYER 1 Scout 3: (3, 2) -> (3, 3)
+		PLAYER 1 Scout 4: (3, 1) -> (3, 2)
+		PLAYER 1 Scout 5: (3, 0) -> (3, 1)
 
 	PLAYER 2 MOVING:
-		PLAYER 2 Scout 1: (3, 1) -> (3, 0)
 
 END OF TURN 6 MOVEMENT PHASE
 
 BEGINNING OF TURN 6 COMBAT PHASE
 
- PLAYER 1 SHIPS: []
+	COMBAT AT (3, 6):
+
+		COMBAT ORDER:
+
+			PLAYER 1 BattleCruiser 3 
+			PLAYER 2 Scout 5 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+
+		Attacker: PLAYER 1 BattleCruiser 3
+		Defender: PLAYER 2 Scout 5
+		(MISS)
+
+		Attacker: PLAYER 2 Scout 5
+		Defender: PLAYER 1 BattleCruiser 3
+		HIT!
+
+		PLAYER 2 Scout 5 dealt 1 dmg to PLAYER 1 BattleCruiser 3
+		PLAYER 1 BattleCruiser 3 was destroyed
+
+		Attacker: PLAYER 1 Scout 1
+		Defender: PLAYER 2 Scout 5
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 2
+		Defender: PLAYER 2 Scout 5
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 3
+		Defender: PLAYER 2 Scout 5
+		(MISS)
+
+	COMBAT AT (3, 6):
+
+		COMBAT ORDER:
+
+			PLAYER 2 Scout 5 
+			PLAYER 1 Scout 1 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+
+		Attacker: PLAYER 2 Scout 5
+		Defender: PLAYER 1 Scout 1
+		HIT!
+
+		PLAYER 2 Scout 5 dealt 1 dmg to PLAYER 1 Scout 1
+		PLAYER 1 Scout 1 was destroyed
+
+		Attacker: PLAYER 1 Scout 2
+		Defender: PLAYER 2 Scout 5
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 3
+		Defender: PLAYER 2 Scout 5
+		(MISS)
+
+	COMBAT AT (3, 6):
+
+		COMBAT ORDER:
+
+			PLAYER 2 Scout 5 
+			PLAYER 1 Scout 2 
+			PLAYER 1 Scout 3 
+
+		Attacker: PLAYER 2 Scout 5
+		Defender: PLAYER 1 Scout 2
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 2
+		Defender: PLAYER 2 Scout 5
+		(MISS)
+
+		Attacker: PLAYER 1 Scout 3
+		Defender: PLAYER 2 Scout 5
+		HIT!
+
+		PLAYER 1 Scout 3 dealt 1 dmg to PLAYER 2 Scout 5
+		PLAYER 2 Scout 5 was destroyed
 
 END OF TURN 6 COMBAT PHASE
 
- PLAYER 1 SHIPS: []
+START OF TURN 6 ECONOMIC PHASE
 
-WINNER: PLAYER 2
+	PLAYER 1:
+
+		CP: 64
+
+		MAINTENANCE:
+
+		PURCHASES:
+		PLAYER 1 BOUGHT A Scout
+
+		PLAYER HAS 61 LEFTOVER
+
+	PLAYER 2:
+
+		CP: 85
+
+		MAINTENANCE:
+
+		PURCHASES:
+		PLAYER 2 BOUGHT A Scout
+
+		PLAYER HAS 89 LEFTOVER
+
+END OF TURN 6 ECONOMIC PHASE
+
+WINNER: PLAYER 1

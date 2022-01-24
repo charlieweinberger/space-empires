@@ -7,7 +7,7 @@ from logger import *
 
 class Game:
 
-    def __init__(self, players, board_len=7, max_turns=100, initial_cp=150, cp_increment=10):
+    def __init__(self, players, board_len=7, max_turns=1000, initial_cp=150, cp_increment=10):
 
         self.players = {i+1: player for i, player in enumerate(players)}
         
@@ -68,15 +68,15 @@ class Game:
             self.add_to_board(home_colony, coords)
             self.players[i].home_colony = home_colony
 
-            player.cp = self.initial_cp
-            player_ships = self.players[i].strategy.buy_ships(player.cp)
+            self.players[i].cp = self.initial_cp
+            player_ships = self.players[i].strategy.buy_ships(self.players[i].cp)
             player_ships_cost = self.cost(player_ships)
             
-            if player_ships_cost > player.cp:
+            if player_ships_cost > self.players[i].cp:
                 print(f'Player {i} went over budget')
                 continue
             
-            player.cp -= player_ships_cost
+            self.players[i].cp -= player_ships_cost
 
             for ship_name, num_of_ships in player_ships.items():
                 for j in range(num_of_ships):
@@ -132,7 +132,7 @@ class Game:
     
     def get_ship_num(self, player, input_ship_name):
         for ship_name, num_of_ship in player.ship_counter.items():
-            if key == input_ship_name:
+            if ship_name == input_ship_name:
                 return num_of_ship + 1
 
     def hit(self, attacker, defender):
@@ -151,7 +151,6 @@ class Game:
 
     def complete_movement_phase(self):
 
-        self.logger.write(f'\nBEGINNING OF TURN {self.turn} MOVEMENT PHASE\n\n')
         self.logger.write(f'\nBEGINNING OF TURN {self.turn} MOVEMENT PHASE\n\n')
 
         for player in self.players.values():
@@ -248,12 +247,14 @@ class Game:
         for player in self.players.values():
 
             self.logger.write(f'\n\t{player.player_id}:\n')
-            self.logger.write(f'\t\tPLAYER CP: {player.cp}\n')
+            self.logger.write(f'\n\t\tCP: {player.cp}\n')
 
             # income
             player.cp += 10
 
             # maintenance
+
+            self.logger.write(f'\n\t\tMAINTENANCE:\n')
 
             player_ships = sorted(player.ships, key=lambda x: x.maint_cost, reverse=True)
             total_maint_cost = sum(ship.maint_cost for ship in player_ships)
@@ -265,10 +266,12 @@ class Game:
                 while player.cp < total_maint_cost:
                     ship_to_delete = player_ships.pop()
                     total_maint_cost -= ship_to_delete.maint_cost                   
-                    self.logs.write(f'\n{ship_to_delete.ship_id()} HAS BEEN REMOVED')
+                    self.logger.write(f'\n{ship_to_delete.ship_id()} HAS BEEN REMOVED')
                     self.remove_ship(ship_to_delete)
 
             # purchase
+
+            self.logger.write(f'\n\t\tPURCHASES:\n')
 
             wanted_ships = player.strategy.buy_ships(player.cp)
             wanted_ships_cp = 0
@@ -277,7 +280,7 @@ class Game:
             for wanted_ship_name, num_of_wanted_ship in wanted_ships.items():
                 for _ in range(num_of_wanted_ship):
                     wanted_ship_num = self.get_ship_num(player, wanted_ship_name)
-                    wanted_ship = ship_objects[wanted_ship_name](player.player_num, player.home_colony.coords, wanted_ship_num)
+                    wanted_ship = ship_objects[wanted_ship_name](player.player_num, wanted_ship_num, player.home_colony.coords)
                     ships_to_add.append(wanted_ship)
                     wanted_ships_cp += wanted_ship.cp_cost
 
@@ -287,11 +290,11 @@ class Game:
                     player.ships.append(ship)
                     player.ship_counter[ship.name] += 1
                     self.add_to_board(ship, player.home_colony.coords)
-                    self.logs.write(f'\n{player.player_id} BOUGHT A {ship.name}')
+                    self.logger.write(f'\t\t{player.player_id} BOUGHT A {ship.name}\n')
 
                 player.cp -= wanted_ships_cp
 
-            self.logger.write(f'\t\tPLAYER HAS {player.cp} LEFTOVER\n')
+            self.logger.write(f'\n\t\tPLAYER HAS {player.cp} LEFTOVER\n')
 
         self.logger.write(f'\nEND OF TURN {self.turn} ECONOMIC PHASE\n')
 
@@ -300,9 +303,7 @@ class Game:
         while self.winner == None and self.turn < self.max_turns:
             self.complete_movement_phase()
             self.complete_combat_phase()
-            self.logger.write(f'\n PLAYER 1 SHIPS: {self.player[1].ships}\n')
-            self.complete_economic_phase()            
-            self.logger.write(f'\n PLAYER 1 SHIPS: {self.player[1].ships}\n')
+            self.complete_economic_phase()
             self.check_for_winner()
             self.turn += 1
         

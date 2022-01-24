@@ -14,7 +14,7 @@ class Player:
 
         self.ship_counter = {ship_name:0 for ship_name in ship_objects}
         self.ships = []
-        self.cp = 0
+        self.cp = None
 
     def set_player_num(self, i):
         self.player_num = i
