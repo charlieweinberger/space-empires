@@ -284,6 +284,7 @@ class Game:
             self.logger.write(f'\n\t\tPURCHASES:\n')
 
             wanted_ships = player.strategy.buy_ships(player.cp)
+            if wanted_ships == None: wanted_ships = {}
             wanted_ships_cp = 0
             ships_to_add = []
 

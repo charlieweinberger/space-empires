@@ -6,7 +6,7 @@ import math
 class MoveToOpponent:
     def __init__(self):
         self.simple_board = None
-        self.turn = None
+        self.turn = 0
 
     def min_distance_translation(self, ship_info, choices, target_coords):
 
@@ -43,7 +43,7 @@ class MoveToOpponent:
 
     def buy_ships(self, cp_budget):
 
-        if self.turn == None:
+        if self.turn == 0:
             return {'Dreadnaught': 4}
         elif (self.turn % 2) == 0:
             return {'Dreadnaught': 1}
