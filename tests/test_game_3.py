@@ -11,8 +11,8 @@ true_player_2 = 'Strat 2'
 winners_1 = {true_player_1: 0, true_player_2: 0, 'Tie': 0}
 winners_2 = {true_player_2: 0, true_player_1: 0, 'Tie': 0}
 
-num_iterations = 200
-max_turns = 1000
+num_iterations = 100
+max_turns = 100
 
 for _ in range(num_iterations//2):
 

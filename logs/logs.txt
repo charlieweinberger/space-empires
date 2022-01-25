@@ -5,20 +5,16 @@ SETTING UP GAME...
 BEGINNING OF TURN 1 MOVEMENT PHASE
 
 	PLAYER 1 MOVING:
-		PLAYER 1 Scout 1: (3, 0) -> (3, 1)
-		PLAYER 1 Scout 2: (3, 0) -> (3, 1)
-		PLAYER 1 Scout 3: (3, 0) -> (3, 1)
-		PLAYER 1 BattleCruiser 1: (3, 0) -> (3, 1)
-		PLAYER 1 BattleCruiser 2: (3, 0) -> (3, 1)
-		PLAYER 1 BattleCruiser 3: (3, 0) -> (3, 1)
+		PLAYER 1 Dreadnaught 1: (3, 0) -> (3, 1)
+		PLAYER 1 Dreadnaught 2: (3, 0) -> (3, 1)
+		PLAYER 1 Dreadnaught 3: (3, 0) -> (3, 1)
+		PLAYER 1 Dreadnaught 4: (3, 0) -> (3, 1)
 
 	PLAYER 2 MOVING:
-		PLAYER 2 Scout 1: (3, 6) -> (3, 5)
-		PLAYER 2 Scout 2: (3, 6) -> (3, 5)
-		PLAYER 2 Scout 3: (3, 6) -> (3, 5)
-		PLAYER 2 BattleCruiser 1: (3, 6) -> (3, 5)
-		PLAYER 2 BattleCruiser 2: (3, 6) -> (3, 5)
-		PLAYER 2 BattleCruiser 3: (3, 6) -> (3, 5)
+		PLAYER 2 Dreadnaught 1: (3, 6) -> (3, 5)
+		PLAYER 2 Dreadnaught 2: (3, 6) -> (3, 5)
+		PLAYER 2 Dreadnaught 3: (3, 6) -> (3, 5)
+		PLAYER 2 Dreadnaught 4: (3, 6) -> (3, 5)
 
 END OF TURN 1 MOVEMENT PHASE
 
@@ -30,69 +26,55 @@ START OF TURN 1 ECONOMIC PHASE
 
 	PLAYER 1:
 
-		CP: 87
+		INCOME:
+		player.cp = 64
 
 		MAINTENANCE:
-		player.cp = 97
+		PLAYER 1 Dreadnaught 1 maint cost: 3
+		PLAYER 1 Dreadnaught 2 maint cost: 3
+		PLAYER 1 Dreadnaught 3 maint cost: 3
+		PLAYER 1 Dreadnaught 4 maint cost: 3
+		total_maint_cost = 12
 
-		PLAYER 1 BattleCruiser 1 maint cost: 2
-		PLAYER 1 BattleCruiser 2 maint cost: 2
-		PLAYER 1 BattleCruiser 3 maint cost: 2
-		PLAYER 1 Scout 1 maint cost: 1
-		PLAYER 1 Scout 2 maint cost: 1
-		PLAYER 1 Scout 3 maint cost: 1
-		total_maint_cost = 9
-
-		player.cp after maintenance: 88 
+		player.cp after maintenance: 52 
 
 		PURCHASES:
-		PLAYER 1 BOUGHT A Scout
 
-		PLAYER HAS 82 LEFTOVER
+		PLAYER HAS 52 LEFTOVER
 
 	PLAYER 2:
 
-		CP: 87
+		INCOME:
+		player.cp = 64
 
 		MAINTENANCE:
-		player.cp = 97
+		PLAYER 2 Dreadnaught 1 maint cost: 3
+		PLAYER 2 Dreadnaught 2 maint cost: 3
+		PLAYER 2 Dreadnaught 3 maint cost: 3
+		PLAYER 2 Dreadnaught 4 maint cost: 3
+		total_maint_cost = 12
 
-		PLAYER 2 BattleCruiser 1 maint cost: 2
-		PLAYER 2 BattleCruiser 2 maint cost: 2
-		PLAYER 2 BattleCruiser 3 maint cost: 2
-		PLAYER 2 Scout 1 maint cost: 1
-		PLAYER 2 Scout 2 maint cost: 1
-		PLAYER 2 Scout 3 maint cost: 1
-		total_maint_cost = 9
-
-		player.cp after maintenance: 88 
+		player.cp after maintenance: 52 
 
 		PURCHASES:
-		PLAYER 2 BOUGHT A Scout
 
-		PLAYER HAS 82 LEFTOVER
+		PLAYER HAS 52 LEFTOVER
 
 END OF TURN 1 ECONOMIC PHASE
 
 BEGINNING OF TURN 2 MOVEMENT PHASE
 
 	PLAYER 1 MOVING:
-		PLAYER 1 Scout 1: (3, 1) -> (3, 2)
-		PLAYER 1 Scout 2: (3, 1) -> (3, 2)
-		PLAYER 1 Scout 3: (3, 1) -> (3, 2)
-		PLAYER 1 BattleCruiser 1: (3, 1) -> (3, 2)
-		PLAYER 1 BattleCruiser 2: (3, 1) -> (3, 2)
-		PLAYER 1 BattleCruiser 3: (3, 1) -> (3, 2)
-		PLAYER 1 Scout 4: (3, 0) -> (3, 1)
+		PLAYER 1 Dreadnaught 1: (3, 1) -> (3, 2)
+		PLAYER 1 Dreadnaught 2: (3, 1) -> (3, 2)
+		PLAYER 1 Dreadnaught 3: (3, 1) -> (3, 2)
+		PLAYER 1 Dreadnaught 4: (3, 1) -> (3, 2)
 
 	PLAYER 2 MOVING:
-		PLAYER 2 Scout 1: (3, 5) -> (3, 4)
-		PLAYER 2 Scout 2: (3, 5) -> (3, 4)
-		PLAYER 2 Scout 3: (3, 5) -> (3, 4)
-		PLAYER 2 BattleCruiser 1: (3, 5) -> (3, 4)
-		PLAYER 2 BattleCruiser 2: (3, 5) -> (3, 4)
-		PLAYER 2 BattleCruiser 3: (3, 5) -> (3, 4)
-		PLAYER 2 Scout 4: (3, 6) -> (3, 5)
+		PLAYER 2 Dreadnaught 1: (3, 5) -> (3, 4)
+		PLAYER 2 Dreadnaught 2: (3, 5) -> (3, 4)
+		PLAYER 2 Dreadnaught 3: (3, 5) -> (3, 4)
+		PLAYER 2 Dreadnaught 4: (3, 5) -> (3, 4)
 
 END OF TURN 2 MOVEMENT PHASE
 
@@ -104,73 +86,59 @@ START OF TURN 2 ECONOMIC PHASE
 
 	PLAYER 1:
 
-		CP: 82
+		INCOME:
+		player.cp = 62
 
 		MAINTENANCE:
-		player.cp = 92
+		PLAYER 1 Dreadnaught 1 maint cost: 3
+		PLAYER 1 Dreadnaught 2 maint cost: 3
+		PLAYER 1 Dreadnaught 3 maint cost: 3
+		PLAYER 1 Dreadnaught 4 maint cost: 3
+		total_maint_cost = 12
 
-		PLAYER 1 BattleCruiser 1 maint cost: 2
-		PLAYER 1 BattleCruiser 2 maint cost: 2
-		PLAYER 1 BattleCruiser 3 maint cost: 2
-		PLAYER 1 Scout 1 maint cost: 1
-		PLAYER 1 Scout 2 maint cost: 1
-		PLAYER 1 Scout 3 maint cost: 1
-		PLAYER 1 Scout 4 maint cost: 1
-		total_maint_cost = 10
-
-		player.cp after maintenance: 82 
+		player.cp after maintenance: 50 
 
 		PURCHASES:
-		PLAYER 1 BOUGHT A Scout
+		PLAYER 1 BOUGHT A Dreadnaught
 
-		PLAYER HAS 76 LEFTOVER
+		PLAYER HAS 26 LEFTOVER
 
 	PLAYER 2:
 
-		CP: 82
+		INCOME:
+		player.cp = 62
 
 		MAINTENANCE:
-		player.cp = 92
+		PLAYER 2 Dreadnaught 1 maint cost: 3
+		PLAYER 2 Dreadnaught 2 maint cost: 3
+		PLAYER 2 Dreadnaught 3 maint cost: 3
+		PLAYER 2 Dreadnaught 4 maint cost: 3
+		total_maint_cost = 12
 
-		PLAYER 2 BattleCruiser 1 maint cost: 2
-		PLAYER 2 BattleCruiser 2 maint cost: 2
-		PLAYER 2 BattleCruiser 3 maint cost: 2
-		PLAYER 2 Scout 1 maint cost: 1
-		PLAYER 2 Scout 2 maint cost: 1
-		PLAYER 2 Scout 3 maint cost: 1
-		PLAYER 2 Scout 4 maint cost: 1
-		total_maint_cost = 10
-
-		player.cp after maintenance: 82 
+		player.cp after maintenance: 50 
 
 		PURCHASES:
-		PLAYER 2 BOUGHT A Scout
+		PLAYER 2 BOUGHT A Dreadnaught
 
-		PLAYER HAS 76 LEFTOVER
+		PLAYER HAS 26 LEFTOVER
 
 END OF TURN 2 ECONOMIC PHASE
 
 BEGINNING OF TURN 3 MOVEMENT PHASE
 
 	PLAYER 1 MOVING:
-		PLAYER 1 Scout 1: (3, 2) -> (3, 3)
-		PLAYER 1 Scout 2: (3, 2) -> (3, 3)
-		PLAYER 1 Scout 3: (3, 2) -> (3, 3)
-		PLAYER 1 BattleCruiser 1: (3, 2) -> (3, 3)
-		PLAYER 1 BattleCruiser 2: (3, 2) -> (3, 3)
-		PLAYER 1 BattleCruiser 3: (3, 2) -> (3, 3)
-		PLAYER 1 Scout 4: (3, 1) -> (3, 2)
-		PLAYER 1 Scout 5: (3, 0) -> (3, 1)
+		PLAYER 1 Dreadnaught 1: (3, 2) -> (3, 3)
+		PLAYER 1 Dreadnaught 2: (3, 2) -> (3, 3)
+		PLAYER 1 Dreadnaught 3: (3, 2) -> (3, 3)
+		PLAYER 1 Dreadnaught 4: (3, 2) -> (3, 3)
+		PLAYER 1 Dreadnaught 5: (3, 0) -> (3, 1)
 
 	PLAYER 2 MOVING:
-		PLAYER 2 Scout 1: (3, 4) -> (3, 3)
-		PLAYER 2 Scout 2: (3, 4) -> (3, 3)
-		PLAYER 2 Scout 3: (3, 4) -> (3, 3)
-		PLAYER 2 BattleCruiser 1: (3, 4) -> (3, 3)
-		PLAYER 2 BattleCruiser 2: (3, 4) -> (3, 3)
-		PLAYER 2 BattleCruiser 3: (3, 4) -> (3, 3)
-		PLAYER 2 Scout 4: (3, 5) -> (3, 4)
-		PLAYER 2 Scout 5: (3, 6) -> (3, 5)
+		PLAYER 2 Dreadnaught 1: (3, 4) -> (3, 3)
+		PLAYER 2 Dreadnaught 2: (3, 4) -> (3, 3)
+		PLAYER 2 Dreadnaught 3: (3, 4) -> (3, 3)
+		PLAYER 2 Dreadnaught 4: (3, 4) -> (3, 3)
+		PLAYER 2 Dreadnaught 5: (3, 6) -> (3, 5)
 
 END OF TURN 3 MOVEMENT PHASE
 
@@ -180,372 +148,400 @@ BEGINNING OF TURN 3 COMBAT PHASE
 
 		COMBAT ORDER:
 
-			PLAYER 1 BattleCruiser 1 
-			PLAYER 1 BattleCruiser 2 
-			PLAYER 1 BattleCruiser 3 
-			PLAYER 2 BattleCruiser 1 
-			PLAYER 2 BattleCruiser 2 
-			PLAYER 2 BattleCruiser 3 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 1 
-			PLAYER 2 Scout 2 
-			PLAYER 2 Scout 3 
+			PLAYER 1 Dreadnaught 1 
+			PLAYER 1 Dreadnaught 2 
+			PLAYER 1 Dreadnaught 3 
+			PLAYER 1 Dreadnaught 4 
+			PLAYER 2 Dreadnaught 1 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
 
-		Attacker: PLAYER 1 BattleCruiser 1
-		Defender: PLAYER 2 BattleCruiser 1
+		Attacker: PLAYER 1 Dreadnaught 1
+		Defender: PLAYER 2 Dreadnaught 1
 		(MISS)
 
-		Attacker: PLAYER 1 BattleCruiser 2
-		Defender: PLAYER 2 BattleCruiser 1
-		(MISS)
-
-		Attacker: PLAYER 1 BattleCruiser 3
-		Defender: PLAYER 2 BattleCruiser 1
-		(MISS)
-
-		Attacker: PLAYER 2 BattleCruiser 1
-		Defender: PLAYER 1 BattleCruiser 1
-		(MISS)
-
-		Attacker: PLAYER 2 BattleCruiser 2
-		Defender: PLAYER 1 BattleCruiser 1
+		Attacker: PLAYER 1 Dreadnaught 2
+		Defender: PLAYER 2 Dreadnaught 1
 		HIT!
 
-		PLAYER 2 BattleCruiser 2 dealt 1 dmg to PLAYER 1 BattleCruiser 1
+		PLAYER 1 Dreadnaught 2 dealt 1 dmg to PLAYER 2 Dreadnaught 1
 
-		Attacker: PLAYER 2 BattleCruiser 3
-		Defender: PLAYER 1 BattleCruiser 1
+		Attacker: PLAYER 1 Dreadnaught 3
+		Defender: PLAYER 2 Dreadnaught 1
 		(MISS)
 
-		Attacker: PLAYER 1 Scout 1
-		Defender: PLAYER 2 BattleCruiser 1
+		Attacker: PLAYER 1 Dreadnaught 4
+		Defender: PLAYER 2 Dreadnaught 1
 		(MISS)
 
-		Attacker: PLAYER 1 Scout 2
-		Defender: PLAYER 2 BattleCruiser 1
+		Attacker: PLAYER 2 Dreadnaught 1
+		Defender: PLAYER 1 Dreadnaught 1
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 1
 		HIT!
 
-		PLAYER 1 Scout 2 dealt 1 dmg to PLAYER 2 BattleCruiser 1
+		PLAYER 2 Dreadnaught 2 dealt 1 dmg to PLAYER 1 Dreadnaught 1
 
-		Attacker: PLAYER 1 Scout 3
-		Defender: PLAYER 2 BattleCruiser 1
-		(MISS)
-
-		Attacker: PLAYER 2 Scout 1
-		Defender: PLAYER 1 BattleCruiser 1
-		(MISS)
-
-		Attacker: PLAYER 2 Scout 2
-		Defender: PLAYER 1 BattleCruiser 1
-		(MISS)
-
-		Attacker: PLAYER 2 Scout 3
-		Defender: PLAYER 1 BattleCruiser 1
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 1
 		HIT!
 
-		PLAYER 2 Scout 3 dealt 1 dmg to PLAYER 1 BattleCruiser 1
-		PLAYER 1 BattleCruiser 1 was destroyed
+		PLAYER 2 Dreadnaught 3 dealt 1 dmg to PLAYER 1 Dreadnaught 1
+
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 1
+		HIT!
+
+		PLAYER 2 Dreadnaught 4 dealt 1 dmg to PLAYER 1 Dreadnaught 1
+		PLAYER 1 Dreadnaught 1 was destroyed
 
 	COMBAT AT (3, 3):
 
 		COMBAT ORDER:
 
-			PLAYER 1 BattleCruiser 2 
-			PLAYER 1 BattleCruiser 3 
-			PLAYER 2 BattleCruiser 1 
-			PLAYER 2 BattleCruiser 2 
-			PLAYER 2 BattleCruiser 3 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 1 
-			PLAYER 2 Scout 2 
-			PLAYER 2 Scout 3 
+			PLAYER 1 Dreadnaught 2 
+			PLAYER 1 Dreadnaught 3 
+			PLAYER 1 Dreadnaught 4 
+			PLAYER 2 Dreadnaught 1 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
 
-		Attacker: PLAYER 1 BattleCruiser 2
-		Defender: PLAYER 2 BattleCruiser 1
+		Attacker: PLAYER 1 Dreadnaught 2
+		Defender: PLAYER 2 Dreadnaught 1
+		(MISS)
+
+		Attacker: PLAYER 1 Dreadnaught 3
+		Defender: PLAYER 2 Dreadnaught 1
 		HIT!
 
-		PLAYER 1 BattleCruiser 2 dealt 1 dmg to PLAYER 2 BattleCruiser 1
-		PLAYER 2 BattleCruiser 1 was destroyed
+		PLAYER 1 Dreadnaught 3 dealt 1 dmg to PLAYER 2 Dreadnaught 1
 
-		Attacker: PLAYER 2 BattleCruiser 2
-		Defender: PLAYER 1 BattleCruiser 2
+		Attacker: PLAYER 1 Dreadnaught 4
+		Defender: PLAYER 2 Dreadnaught 1
 		(MISS)
 
-		Attacker: PLAYER 2 BattleCruiser 3
-		Defender: PLAYER 1 BattleCruiser 2
+		Attacker: PLAYER 2 Dreadnaught 1
+		Defender: PLAYER 1 Dreadnaught 2
 		(MISS)
 
-		Attacker: PLAYER 2 Scout 1
-		Defender: PLAYER 1 BattleCruiser 2
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 2
 		(MISS)
 
-		Attacker: PLAYER 2 Scout 2
-		Defender: PLAYER 1 BattleCruiser 2
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 2
 		(MISS)
 
-		Attacker: PLAYER 2 Scout 3
-		Defender: PLAYER 1 BattleCruiser 2
-		(MISS)
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 2
+		HIT!
+
+		PLAYER 2 Dreadnaught 4 dealt 1 dmg to PLAYER 1 Dreadnaught 2
 
 	COMBAT AT (3, 3):
 
 		COMBAT ORDER:
 
-			PLAYER 1 BattleCruiser 2 
-			PLAYER 1 BattleCruiser 3 
-			PLAYER 2 BattleCruiser 2 
-			PLAYER 2 BattleCruiser 3 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 1 
-			PLAYER 2 Scout 2 
-			PLAYER 2 Scout 3 
+			PLAYER 1 Dreadnaught 2 
+			PLAYER 1 Dreadnaught 3 
+			PLAYER 1 Dreadnaught 4 
+			PLAYER 2 Dreadnaught 1 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
 
-		Attacker: PLAYER 1 BattleCruiser 2
-		Defender: PLAYER 2 BattleCruiser 2
+		Attacker: PLAYER 1 Dreadnaught 2
+		Defender: PLAYER 2 Dreadnaught 1
+		(MISS)
+
+		Attacker: PLAYER 1 Dreadnaught 3
+		Defender: PLAYER 2 Dreadnaught 1
+		(MISS)
+
+		Attacker: PLAYER 1 Dreadnaught 4
+		Defender: PLAYER 2 Dreadnaught 1
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 1
+		Defender: PLAYER 1 Dreadnaught 2
 		HIT!
 
-		PLAYER 1 BattleCruiser 2 dealt 1 dmg to PLAYER 2 BattleCruiser 2
+		PLAYER 2 Dreadnaught 1 dealt 1 dmg to PLAYER 1 Dreadnaught 2
 
-		Attacker: PLAYER 1 BattleCruiser 3
-		Defender: PLAYER 2 BattleCruiser 2
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 2
 		(MISS)
 
-		Attacker: PLAYER 2 BattleCruiser 2
-		Defender: PLAYER 1 BattleCruiser 2
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 2
 		(MISS)
 
-		Attacker: PLAYER 2 BattleCruiser 3
-		Defender: PLAYER 1 BattleCruiser 2
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 1
-		Defender: PLAYER 2 BattleCruiser 2
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 2
-		Defender: PLAYER 2 BattleCruiser 2
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 3
-		Defender: PLAYER 2 BattleCruiser 2
-		(MISS)
-
-		Attacker: PLAYER 2 Scout 1
-		Defender: PLAYER 1 BattleCruiser 2
-		(MISS)
-
-		Attacker: PLAYER 2 Scout 2
-		Defender: PLAYER 1 BattleCruiser 2
-		(MISS)
-
-		Attacker: PLAYER 2 Scout 3
-		Defender: PLAYER 1 BattleCruiser 2
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 2
 		(MISS)
 
 	COMBAT AT (3, 3):
 
 		COMBAT ORDER:
 
-			PLAYER 1 BattleCruiser 2 
-			PLAYER 1 BattleCruiser 3 
-			PLAYER 2 BattleCruiser 2 
-			PLAYER 2 BattleCruiser 3 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 1 
-			PLAYER 2 Scout 2 
-			PLAYER 2 Scout 3 
+			PLAYER 1 Dreadnaught 2 
+			PLAYER 1 Dreadnaught 3 
+			PLAYER 1 Dreadnaught 4 
+			PLAYER 2 Dreadnaught 1 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
 
-		Attacker: PLAYER 1 BattleCruiser 2
-		Defender: PLAYER 2 BattleCruiser 2
+		Attacker: PLAYER 1 Dreadnaught 2
+		Defender: PLAYER 2 Dreadnaught 1
+		(MISS)
+
+		Attacker: PLAYER 1 Dreadnaught 3
+		Defender: PLAYER 2 Dreadnaught 1
 		HIT!
 
-		PLAYER 1 BattleCruiser 2 dealt 1 dmg to PLAYER 2 BattleCruiser 2
-		PLAYER 2 BattleCruiser 2 was destroyed
+		PLAYER 1 Dreadnaught 3 dealt 1 dmg to PLAYER 2 Dreadnaught 1
+		PLAYER 2 Dreadnaught 1 was destroyed
 
-		Attacker: PLAYER 2 BattleCruiser 3
-		Defender: PLAYER 1 BattleCruiser 2
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 2
 		(MISS)
 
-		Attacker: PLAYER 2 Scout 1
-		Defender: PLAYER 1 BattleCruiser 2
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 2
 		(MISS)
 
-		Attacker: PLAYER 2 Scout 2
-		Defender: PLAYER 1 BattleCruiser 2
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 2
+		HIT!
+
+		PLAYER 2 Dreadnaught 4 dealt 1 dmg to PLAYER 1 Dreadnaught 2
+		PLAYER 1 Dreadnaught 2 was destroyed
+
+	COMBAT AT (3, 3):
+
+		COMBAT ORDER:
+
+			PLAYER 1 Dreadnaught 3 
+			PLAYER 1 Dreadnaught 4 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
+
+		Attacker: PLAYER 1 Dreadnaught 3
+		Defender: PLAYER 2 Dreadnaught 2
+		HIT!
+
+		PLAYER 1 Dreadnaught 3 dealt 1 dmg to PLAYER 2 Dreadnaught 2
+
+		Attacker: PLAYER 1 Dreadnaught 4
+		Defender: PLAYER 2 Dreadnaught 2
 		(MISS)
 
-		Attacker: PLAYER 2 Scout 3
-		Defender: PLAYER 1 BattleCruiser 2
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 3
+		HIT!
+
+		PLAYER 2 Dreadnaught 2 dealt 1 dmg to PLAYER 1 Dreadnaught 3
+
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 3
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 3
 		(MISS)
 
 	COMBAT AT (3, 3):
 
 		COMBAT ORDER:
 
-			PLAYER 1 BattleCruiser 2 
-			PLAYER 1 BattleCruiser 3 
-			PLAYER 2 BattleCruiser 3 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 1 
-			PLAYER 2 Scout 2 
-			PLAYER 2 Scout 3 
+			PLAYER 1 Dreadnaught 3 
+			PLAYER 1 Dreadnaught 4 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
 
-		Attacker: PLAYER 1 BattleCruiser 2
-		Defender: PLAYER 2 BattleCruiser 3
+		Attacker: PLAYER 1 Dreadnaught 3
+		Defender: PLAYER 2 Dreadnaught 2
+		(MISS)
+
+		Attacker: PLAYER 1 Dreadnaught 4
+		Defender: PLAYER 2 Dreadnaught 2
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 3
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 3
 		HIT!
 
-		PLAYER 1 BattleCruiser 2 dealt 1 dmg to PLAYER 2 BattleCruiser 3
+		PLAYER 2 Dreadnaught 3 dealt 1 dmg to PLAYER 1 Dreadnaught 3
 
-		Attacker: PLAYER 1 BattleCruiser 3
-		Defender: PLAYER 2 BattleCruiser 3
-		(MISS)
-
-		Attacker: PLAYER 2 BattleCruiser 3
-		Defender: PLAYER 1 BattleCruiser 2
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 1
-		Defender: PLAYER 2 BattleCruiser 3
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 2
-		Defender: PLAYER 2 BattleCruiser 3
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 3
-		Defender: PLAYER 2 BattleCruiser 3
-		HIT!
-
-		PLAYER 1 Scout 3 dealt 1 dmg to PLAYER 2 BattleCruiser 3
-		PLAYER 2 BattleCruiser 3 was destroyed
-
-		Attacker: PLAYER 2 Scout 1
-		Defender: PLAYER 1 BattleCruiser 2
-		HIT!
-
-		PLAYER 2 Scout 1 dealt 1 dmg to PLAYER 1 BattleCruiser 2
-
-		Attacker: PLAYER 2 Scout 2
-		Defender: PLAYER 1 BattleCruiser 2
-		(MISS)
-
-		Attacker: PLAYER 2 Scout 3
-		Defender: PLAYER 1 BattleCruiser 2
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 3
 		(MISS)
 
 	COMBAT AT (3, 3):
 
 		COMBAT ORDER:
 
-			PLAYER 1 BattleCruiser 2 
-			PLAYER 1 BattleCruiser 3 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 1 
-			PLAYER 2 Scout 2 
-			PLAYER 2 Scout 3 
+			PLAYER 1 Dreadnaught 3 
+			PLAYER 1 Dreadnaught 4 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
 
-		Attacker: PLAYER 1 BattleCruiser 2
-		Defender: PLAYER 2 Scout 1
-		HIT!
-
-		PLAYER 1 BattleCruiser 2 dealt 1 dmg to PLAYER 2 Scout 1
-		PLAYER 2 Scout 1 was destroyed
-
-		Attacker: PLAYER 2 Scout 2
-		Defender: PLAYER 1 BattleCruiser 2
+		Attacker: PLAYER 1 Dreadnaught 3
+		Defender: PLAYER 2 Dreadnaught 2
 		(MISS)
 
-		Attacker: PLAYER 2 Scout 3
-		Defender: PLAYER 1 BattleCruiser 2
+		Attacker: PLAYER 1 Dreadnaught 4
+		Defender: PLAYER 2 Dreadnaught 2
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 3
 		HIT!
 
-		PLAYER 2 Scout 3 dealt 1 dmg to PLAYER 1 BattleCruiser 2
-		PLAYER 1 BattleCruiser 2 was destroyed
+		PLAYER 2 Dreadnaught 2 dealt 1 dmg to PLAYER 1 Dreadnaught 3
+		PLAYER 1 Dreadnaught 3 was destroyed
 
 	COMBAT AT (3, 3):
 
 		COMBAT ORDER:
 
-			PLAYER 1 BattleCruiser 3 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 2 
-			PLAYER 2 Scout 3 
+			PLAYER 1 Dreadnaught 4 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
 
-		Attacker: PLAYER 1 BattleCruiser 3
-		Defender: PLAYER 2 Scout 2
+		Attacker: PLAYER 1 Dreadnaught 4
+		Defender: PLAYER 2 Dreadnaught 2
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 4
 		HIT!
 
-		PLAYER 1 BattleCruiser 3 dealt 1 dmg to PLAYER 2 Scout 2
-		PLAYER 2 Scout 2 was destroyed
+		PLAYER 2 Dreadnaught 2 dealt 1 dmg to PLAYER 1 Dreadnaught 4
 
-		Attacker: PLAYER 2 Scout 3
-		Defender: PLAYER 1 BattleCruiser 3
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 4
 		(MISS)
 
-	COMBAT AT (3, 3):
-
-		COMBAT ORDER:
-
-			PLAYER 1 BattleCruiser 3 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 3 
-
-		Attacker: PLAYER 1 BattleCruiser 3
-		Defender: PLAYER 2 Scout 3
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 1
-		Defender: PLAYER 2 Scout 3
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 2
-		Defender: PLAYER 2 Scout 3
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 3
-		Defender: PLAYER 2 Scout 3
-		(MISS)
-
-		Attacker: PLAYER 2 Scout 3
-		Defender: PLAYER 1 BattleCruiser 3
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 4
 		(MISS)
 
 	COMBAT AT (3, 3):
 
 		COMBAT ORDER:
 
-			PLAYER 1 BattleCruiser 3 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 3 
+			PLAYER 1 Dreadnaught 4 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
 
-		Attacker: PLAYER 1 BattleCruiser 3
-		Defender: PLAYER 2 Scout 3
+		Attacker: PLAYER 1 Dreadnaught 4
+		Defender: PLAYER 2 Dreadnaught 2
 		(MISS)
 
-		Attacker: PLAYER 1 Scout 1
-		Defender: PLAYER 2 Scout 3
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 4
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 4
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 4
 		HIT!
 
-		PLAYER 1 Scout 1 dealt 1 dmg to PLAYER 2 Scout 3
-		PLAYER 2 Scout 3 was destroyed
+		PLAYER 2 Dreadnaught 4 dealt 1 dmg to PLAYER 1 Dreadnaught 4
+
+	COMBAT AT (3, 3):
+
+		COMBAT ORDER:
+
+			PLAYER 1 Dreadnaught 4 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
+
+		Attacker: PLAYER 1 Dreadnaught 4
+		Defender: PLAYER 2 Dreadnaught 2
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 4
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 4
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 4
+		(MISS)
+
+	COMBAT AT (3, 3):
+
+		COMBAT ORDER:
+
+			PLAYER 1 Dreadnaught 4 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
+
+		Attacker: PLAYER 1 Dreadnaught 4
+		Defender: PLAYER 2 Dreadnaught 2
+		HIT!
+
+		PLAYER 1 Dreadnaught 4 dealt 1 dmg to PLAYER 2 Dreadnaught 2
+
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 4
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 4
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 4
+		(MISS)
+
+	COMBAT AT (3, 3):
+
+		COMBAT ORDER:
+
+			PLAYER 1 Dreadnaught 4 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
+
+		Attacker: PLAYER 1 Dreadnaught 4
+		Defender: PLAYER 2 Dreadnaught 2
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 4
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 4
+		HIT!
+
+		PLAYER 2 Dreadnaught 3 dealt 1 dmg to PLAYER 1 Dreadnaught 4
+		PLAYER 1 Dreadnaught 4 was destroyed
 
 END OF TURN 3 COMBAT PHASE
 
@@ -553,135 +549,201 @@ START OF TURN 3 ECONOMIC PHASE
 
 	PLAYER 1:
 
-		CP: 76
+		INCOME:
+		player.cp = 36
 
 		MAINTENANCE:
-		player.cp = 86
+		PLAYER 1 Dreadnaught 5 maint cost: 3
+		total_maint_cost = 3
 
-		PLAYER 1 BattleCruiser 3 maint cost: 2
-		PLAYER 1 Scout 1 maint cost: 1
-		PLAYER 1 Scout 2 maint cost: 1
-		PLAYER 1 Scout 3 maint cost: 1
-		PLAYER 1 Scout 4 maint cost: 1
-		PLAYER 1 Scout 5 maint cost: 1
-		total_maint_cost = 7
-
-		player.cp after maintenance: 79 
+		player.cp after maintenance: 33 
 
 		PURCHASES:
-		PLAYER 1 BOUGHT A Scout
 
-		PLAYER HAS 73 LEFTOVER
+		PLAYER HAS 33 LEFTOVER
 
 	PLAYER 2:
 
-		CP: 76
+		INCOME:
+		player.cp = 36
 
 		MAINTENANCE:
-		player.cp = 86
+		PLAYER 2 Dreadnaught 2 maint cost: 3
+		PLAYER 2 Dreadnaught 3 maint cost: 3
+		PLAYER 2 Dreadnaught 4 maint cost: 3
+		PLAYER 2 Dreadnaught 5 maint cost: 3
+		total_maint_cost = 12
 
-		PLAYER 2 Scout 4 maint cost: 1
-		PLAYER 2 Scout 5 maint cost: 1
-		total_maint_cost = 2
-
-		player.cp after maintenance: 84 
+		player.cp after maintenance: 24 
 
 		PURCHASES:
-		PLAYER 2 BOUGHT A Scout
 
-		PLAYER HAS 78 LEFTOVER
+		PLAYER HAS 24 LEFTOVER
 
 END OF TURN 3 ECONOMIC PHASE
 
 BEGINNING OF TURN 4 MOVEMENT PHASE
 
 	PLAYER 1 MOVING:
-		PLAYER 1 Scout 1: (3, 3) -> (3, 4)
-		PLAYER 1 Scout 2: (3, 3) -> (3, 4)
-		PLAYER 1 Scout 3: (3, 3) -> (3, 4)
-		PLAYER 1 BattleCruiser 3: (3, 3) -> (3, 4)
-		PLAYER 1 Scout 4: (3, 2) -> (3, 3)
-		PLAYER 1 Scout 5: (3, 1) -> (3, 2)
-		PLAYER 1 Scout 6: (3, 0) -> (3, 1)
+		PLAYER 1 Dreadnaught 5: (3, 1) -> (3, 2)
 
 	PLAYER 2 MOVING:
-		PLAYER 2 Scout 5: (3, 5) -> (3, 4)
-		PLAYER 2 Scout 6: (3, 6) -> (3, 5)
+		PLAYER 2 Dreadnaught 2: (3, 3) -> (3, 2)
+		PLAYER 2 Dreadnaught 3: (3, 3) -> (3, 2)
+		PLAYER 2 Dreadnaught 4: (3, 3) -> (3, 2)
+		PLAYER 2 Dreadnaught 5: (3, 5) -> (3, 4)
 
 END OF TURN 4 MOVEMENT PHASE
 
 BEGINNING OF TURN 4 COMBAT PHASE
 
-	COMBAT AT (3, 4):
+	COMBAT AT (3, 2):
 
 		COMBAT ORDER:
 
-			PLAYER 1 BattleCruiser 3 
-			PLAYER 2 Scout 4 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 5 
+			PLAYER 1 Dreadnaught 5 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
 
-		Attacker: PLAYER 1 BattleCruiser 3
-		Defender: PLAYER 2 Scout 4
-		HIT!
-
-		PLAYER 1 BattleCruiser 3 dealt 1 dmg to PLAYER 2 Scout 4
-		PLAYER 2 Scout 4 was destroyed
-
-		Attacker: PLAYER 2 Scout 5
-		Defender: PLAYER 1 BattleCruiser 3
+		Attacker: PLAYER 1 Dreadnaught 5
+		Defender: PLAYER 2 Dreadnaught 2
 		(MISS)
 
-	COMBAT AT (3, 4):
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 5
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 5
+		HIT!
+
+		PLAYER 2 Dreadnaught 3 dealt 1 dmg to PLAYER 1 Dreadnaught 5
+
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 5
+		(MISS)
+
+	COMBAT AT (3, 2):
 
 		COMBAT ORDER:
 
-			PLAYER 1 BattleCruiser 3 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 5 
+			PLAYER 1 Dreadnaught 5 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
 
-		Attacker: PLAYER 1 BattleCruiser 3
-		Defender: PLAYER 2 Scout 5
+		Attacker: PLAYER 1 Dreadnaught 5
+		Defender: PLAYER 2 Dreadnaught 2
 		(MISS)
 
-		Attacker: PLAYER 1 Scout 1
-		Defender: PLAYER 2 Scout 5
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 5
 		(MISS)
 
-		Attacker: PLAYER 1 Scout 2
-		Defender: PLAYER 2 Scout 5
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 5
 		(MISS)
 
-		Attacker: PLAYER 1 Scout 3
-		Defender: PLAYER 2 Scout 5
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 5
 		(MISS)
 
-		Attacker: PLAYER 2 Scout 5
-		Defender: PLAYER 1 BattleCruiser 3
-		HIT!
-
-		PLAYER 2 Scout 5 dealt 1 dmg to PLAYER 1 BattleCruiser 3
-
-	COMBAT AT (3, 4):
+	COMBAT AT (3, 2):
 
 		COMBAT ORDER:
 
-			PLAYER 1 BattleCruiser 3 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 5 
+			PLAYER 1 Dreadnaught 5 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
 
-		Attacker: PLAYER 1 BattleCruiser 3
-		Defender: PLAYER 2 Scout 5
+		Attacker: PLAYER 1 Dreadnaught 5
+		Defender: PLAYER 2 Dreadnaught 2
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 2
+		Defender: PLAYER 1 Dreadnaught 5
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 5
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 5
+		(MISS)
+
+	COMBAT AT (3, 2):
+
+		COMBAT ORDER:
+
+			PLAYER 1 Dreadnaught 5 
+			PLAYER 2 Dreadnaught 2 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
+
+		Attacker: PLAYER 1 Dreadnaught 5
+		Defender: PLAYER 2 Dreadnaught 2
 		HIT!
 
-		PLAYER 1 BattleCruiser 3 dealt 1 dmg to PLAYER 2 Scout 5
-		PLAYER 2 Scout 5 was destroyed
+		PLAYER 1 Dreadnaught 5 dealt 1 dmg to PLAYER 2 Dreadnaught 2
+		PLAYER 2 Dreadnaught 2 was destroyed
+
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 5
+		HIT!
+
+		PLAYER 2 Dreadnaught 3 dealt 1 dmg to PLAYER 1 Dreadnaught 5
+
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 5
+		(MISS)
+
+	COMBAT AT (3, 2):
+
+		COMBAT ORDER:
+
+			PLAYER 1 Dreadnaught 5 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
+
+		Attacker: PLAYER 1 Dreadnaught 5
+		Defender: PLAYER 2 Dreadnaught 3
+		HIT!
+
+		PLAYER 1 Dreadnaught 5 dealt 1 dmg to PLAYER 2 Dreadnaught 3
+
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 5
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 5
+		(MISS)
+
+	COMBAT AT (3, 2):
+
+		COMBAT ORDER:
+
+			PLAYER 1 Dreadnaught 5 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
+
+		Attacker: PLAYER 1 Dreadnaught 5
+		Defender: PLAYER 2 Dreadnaught 3
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 5
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 5
+		HIT!
+
+		PLAYER 2 Dreadnaught 4 dealt 1 dmg to PLAYER 1 Dreadnaught 5
+		PLAYER 1 Dreadnaught 5 was destroyed
 
 END OF TURN 4 COMBAT PHASE
 
@@ -689,147 +751,158 @@ START OF TURN 4 ECONOMIC PHASE
 
 	PLAYER 1:
 
-		CP: 73
+		INCOME:
+		player.cp = 43
 
 		MAINTENANCE:
-		player.cp = 83
+		total_maint_cost = 0
 
-		PLAYER 1 BattleCruiser 3 maint cost: 2
-		PLAYER 1 Scout 1 maint cost: 1
-		PLAYER 1 Scout 2 maint cost: 1
-		PLAYER 1 Scout 3 maint cost: 1
-		PLAYER 1 Scout 4 maint cost: 1
-		PLAYER 1 Scout 5 maint cost: 1
-		PLAYER 1 Scout 6 maint cost: 1
-		total_maint_cost = 8
-
-		player.cp after maintenance: 75 
+		player.cp after maintenance: 43 
 
 		PURCHASES:
-		PLAYER 1 BOUGHT A Scout
+		PLAYER 1 BOUGHT A Dreadnaught
 
-		PLAYER HAS 69 LEFTOVER
+		PLAYER HAS 19 LEFTOVER
 
 	PLAYER 2:
 
-		CP: 78
+		INCOME:
+		player.cp = 34
 
 		MAINTENANCE:
-		player.cp = 88
+		PLAYER 2 Dreadnaught 3 maint cost: 3
+		PLAYER 2 Dreadnaught 4 maint cost: 3
+		PLAYER 2 Dreadnaught 5 maint cost: 3
+		total_maint_cost = 9
 
-		PLAYER 2 Scout 6 maint cost: 1
-		total_maint_cost = 1
-
-		player.cp after maintenance: 87 
+		player.cp after maintenance: 25 
 
 		PURCHASES:
-		PLAYER 2 BOUGHT A Scout
+		PLAYER 2 BOUGHT A Dreadnaught
 
-		PLAYER HAS 81 LEFTOVER
+		PLAYER HAS 1 LEFTOVER
 
 END OF TURN 4 ECONOMIC PHASE
 
 BEGINNING OF TURN 5 MOVEMENT PHASE
 
 	PLAYER 1 MOVING:
-		PLAYER 1 Scout 1: (3, 4) -> (3, 5)
-		PLAYER 1 Scout 2: (3, 4) -> (3, 5)
-		PLAYER 1 Scout 3: (3, 4) -> (3, 5)
-		PLAYER 1 BattleCruiser 3: (3, 4) -> (3, 5)
-		PLAYER 1 Scout 4: (3, 3) -> (3, 4)
-		PLAYER 1 Scout 5: (3, 2) -> (3, 3)
-		PLAYER 1 Scout 6: (3, 1) -> (3, 2)
-		PLAYER 1 Scout 7: (3, 0) -> (3, 1)
+		PLAYER 1 Dreadnaught 6: (3, 0) -> (3, 1)
 
 	PLAYER 2 MOVING:
-		PLAYER 2 Scout 7: (3, 6) -> (3, 5)
+		PLAYER 2 Dreadnaught 3: (3, 2) -> (3, 1)
+		PLAYER 2 Dreadnaught 4: (3, 2) -> (3, 1)
+		PLAYER 2 Dreadnaught 5: (3, 4) -> (3, 3)
+		PLAYER 2 Dreadnaught 6: (3, 6) -> (3, 5)
 
 END OF TURN 5 MOVEMENT PHASE
 
 BEGINNING OF TURN 5 COMBAT PHASE
 
-	COMBAT AT (3, 5):
+	COMBAT AT (3, 1):
 
 		COMBAT ORDER:
 
-			PLAYER 1 BattleCruiser 3 
-			PLAYER 2 Scout 6 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 7 
+			PLAYER 1 Dreadnaught 6 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
 
-		Attacker: PLAYER 1 BattleCruiser 3
-		Defender: PLAYER 2 Scout 6
+		Attacker: PLAYER 1 Dreadnaught 6
+		Defender: PLAYER 2 Dreadnaught 3
 		(MISS)
 
-		Attacker: PLAYER 2 Scout 6
-		Defender: PLAYER 1 BattleCruiser 3
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 6
 		HIT!
 
-		PLAYER 2 Scout 6 dealt 1 dmg to PLAYER 1 BattleCruiser 3
-		PLAYER 1 BattleCruiser 3 was destroyed
+		PLAYER 2 Dreadnaught 3 dealt 1 dmg to PLAYER 1 Dreadnaught 6
 
-		Attacker: PLAYER 1 Scout 1
-		Defender: PLAYER 2 Scout 6
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 6
 		(MISS)
 
-		Attacker: PLAYER 1 Scout 2
-		Defender: PLAYER 2 Scout 6
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 3
-		Defender: PLAYER 2 Scout 6
-		(MISS)
-
-	COMBAT AT (3, 5):
+	COMBAT AT (3, 1):
 
 		COMBAT ORDER:
 
-			PLAYER 2 Scout 6 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 7 
+			PLAYER 1 Dreadnaught 6 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
 
-		Attacker: PLAYER 2 Scout 6
-		Defender: PLAYER 1 Scout 1
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 1
-		Defender: PLAYER 2 Scout 6
+		Attacker: PLAYER 1 Dreadnaught 6
+		Defender: PLAYER 2 Dreadnaught 3
 		HIT!
 
-		PLAYER 1 Scout 1 dealt 1 dmg to PLAYER 2 Scout 6
-		PLAYER 2 Scout 6 was destroyed
+		PLAYER 1 Dreadnaught 6 dealt 1 dmg to PLAYER 2 Dreadnaught 3
 
-		Attacker: PLAYER 2 Scout 7
-		Defender: PLAYER 1 Scout 1
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 6
+		HIT!
+
+		PLAYER 2 Dreadnaught 3 dealt 1 dmg to PLAYER 1 Dreadnaught 6
+
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 6
 		(MISS)
 
-	COMBAT AT (3, 5):
+	COMBAT AT (3, 1):
 
 		COMBAT ORDER:
 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-			PLAYER 2 Scout 7 
+			PLAYER 1 Dreadnaught 6 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
 
-		Attacker: PLAYER 1 Scout 1
-		Defender: PLAYER 2 Scout 7
+		Attacker: PLAYER 1 Dreadnaught 6
+		Defender: PLAYER 2 Dreadnaught 3
 		(MISS)
 
-		Attacker: PLAYER 1 Scout 2
-		Defender: PLAYER 2 Scout 7
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 6
 		(MISS)
 
-		Attacker: PLAYER 1 Scout 3
-		Defender: PLAYER 2 Scout 7
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 6
+		(MISS)
+
+	COMBAT AT (3, 1):
+
+		COMBAT ORDER:
+
+			PLAYER 1 Dreadnaught 6 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
+
+		Attacker: PLAYER 1 Dreadnaught 6
+		Defender: PLAYER 2 Dreadnaught 3
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 6
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 4
+		Defender: PLAYER 1 Dreadnaught 6
+		(MISS)
+
+	COMBAT AT (3, 1):
+
+		COMBAT ORDER:
+
+			PLAYER 1 Dreadnaught 6 
+			PLAYER 2 Dreadnaught 3 
+			PLAYER 2 Dreadnaught 4 
+
+		Attacker: PLAYER 1 Dreadnaught 6
+		Defender: PLAYER 2 Dreadnaught 3
+		(MISS)
+
+		Attacker: PLAYER 2 Dreadnaught 3
+		Defender: PLAYER 1 Dreadnaught 6
 		HIT!
 
-		PLAYER 1 Scout 3 dealt 1 dmg to PLAYER 2 Scout 7
-		PLAYER 2 Scout 7 was destroyed
+		PLAYER 2 Dreadnaught 3 dealt 1 dmg to PLAYER 1 Dreadnaught 6
+		PLAYER 1 Dreadnaught 6 was destroyed
 
 END OF TURN 5 COMBAT PHASE
 
@@ -837,132 +910,51 @@ START OF TURN 5 ECONOMIC PHASE
 
 	PLAYER 1:
 
-		CP: 69
+		INCOME:
+		player.cp = 29
 
 		MAINTENANCE:
-		player.cp = 79
+		total_maint_cost = 0
 
-		PLAYER 1 Scout 1 maint cost: 1
-		PLAYER 1 Scout 2 maint cost: 1
-		PLAYER 1 Scout 3 maint cost: 1
-		PLAYER 1 Scout 4 maint cost: 1
-		PLAYER 1 Scout 5 maint cost: 1
-		PLAYER 1 Scout 6 maint cost: 1
-		PLAYER 1 Scout 7 maint cost: 1
-		total_maint_cost = 7
-
-		player.cp after maintenance: 72 
+		player.cp after maintenance: 29 
 
 		PURCHASES:
-		PLAYER 1 BOUGHT A Scout
 
-		PLAYER HAS 66 LEFTOVER
+		PLAYER HAS 29 LEFTOVER
 
 	PLAYER 2:
 
-		CP: 81
+		INCOME:
+		player.cp = 11
 
 		MAINTENANCE:
-		player.cp = 91
+		PLAYER 2 Dreadnaught 3 maint cost: 3
+		PLAYER 2 Dreadnaught 4 maint cost: 3
+		PLAYER 2 Dreadnaught 5 maint cost: 3
+		PLAYER 2 Dreadnaught 6 maint cost: 3
+		total_maint_cost = 12
 
-		total_maint_cost = 0
-
-		player.cp after maintenance: 91 
+		PLAYER 2 Dreadnaught 6 HAS BEEN REMOVED
+		player.cp after maintenance: 11 
 
 		PURCHASES:
-		PLAYER 2 BOUGHT A Scout
 
-		PLAYER HAS 85 LEFTOVER
+		PLAYER HAS 11 LEFTOVER
 
 END OF TURN 5 ECONOMIC PHASE
 
 BEGINNING OF TURN 6 MOVEMENT PHASE
 
-	PLAYER 1 MOVING:
-		PLAYER 1 Scout 1: (3, 5) -> (3, 6)
-		PLAYER 1 Scout 2: (3, 5) -> (3, 6)
-		PLAYER 1 Scout 3: (3, 5) -> (3, 6)
-		PLAYER 1 Scout 4: (3, 4) -> (3, 5)
-		PLAYER 1 Scout 5: (3, 3) -> (3, 4)
-		PLAYER 1 Scout 6: (3, 2) -> (3, 3)
-		PLAYER 1 Scout 7: (3, 1) -> (3, 2)
-		PLAYER 1 Scout 8: (3, 0) -> (3, 1)
+	PLAYER 1 HAS NO SHIPS
 
 	PLAYER 2 MOVING:
+		PLAYER 2 Dreadnaught 3: (3, 1) -> (3, 0)
+		PLAYER 2 Dreadnaught 4: (3, 1) -> (3, 0)
+		PLAYER 2 Dreadnaught 5: (3, 3) -> (3, 2)
 
 END OF TURN 6 MOVEMENT PHASE
 
 BEGINNING OF TURN 6 COMBAT PHASE
-
-	COMBAT AT (3, 6):
-
-		COMBAT ORDER:
-
-			PLAYER 2 Scout 8 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-
-		Attacker: PLAYER 2 Scout 8
-		Defender: PLAYER 1 Scout 1
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 1
-		Defender: PLAYER 2 Scout 8
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 2
-		Defender: PLAYER 2 Scout 8
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 3
-		Defender: PLAYER 2 Scout 8
-		(MISS)
-
-	COMBAT AT (3, 6):
-
-		COMBAT ORDER:
-
-			PLAYER 2 Scout 8 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-
-		Attacker: PLAYER 2 Scout 8
-		Defender: PLAYER 1 Scout 1
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 1
-		Defender: PLAYER 2 Scout 8
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 2
-		Defender: PLAYER 2 Scout 8
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 3
-		Defender: PLAYER 2 Scout 8
-		(MISS)
-
-	COMBAT AT (3, 6):
-
-		COMBAT ORDER:
-
-			PLAYER 2 Scout 8 
-			PLAYER 1 Scout 1 
-			PLAYER 1 Scout 2 
-			PLAYER 1 Scout 3 
-
-		Attacker: PLAYER 2 Scout 8
-		Defender: PLAYER 1 Scout 1
-		(MISS)
-
-		Attacker: PLAYER 1 Scout 1
-		Defender: PLAYER 2 Scout 8
-		HIT!
-
-		PLAYER 1 Scout 1 dealt 1 dmg to PLAYER 2 Scout 8
-		PLAYER 2 Scout 8 was destroyed
 
 END OF TURN 6 COMBAT PHASE
 
@@ -970,44 +962,36 @@ START OF TURN 6 ECONOMIC PHASE
 
 	PLAYER 1:
 
-		CP: 66
+		INCOME:
+		player.cp = 39
 
 		MAINTENANCE:
-		player.cp = 76
+		total_maint_cost = 0
 
-		PLAYER 1 Scout 1 maint cost: 1
-		PLAYER 1 Scout 2 maint cost: 1
-		PLAYER 1 Scout 3 maint cost: 1
-		PLAYER 1 Scout 4 maint cost: 1
-		PLAYER 1 Scout 5 maint cost: 1
-		PLAYER 1 Scout 6 maint cost: 1
-		PLAYER 1 Scout 7 maint cost: 1
-		PLAYER 1 Scout 8 maint cost: 1
-		total_maint_cost = 8
-
-		player.cp after maintenance: 68 
+		player.cp after maintenance: 39 
 
 		PURCHASES:
-		PLAYER 1 BOUGHT A Scout
+		PLAYER 1 BOUGHT A Dreadnaught
 
-		PLAYER HAS 62 LEFTOVER
+		PLAYER HAS 15 LEFTOVER
 
 	PLAYER 2:
 
-		CP: 85
+		INCOME:
+		player.cp = 21
 
 		MAINTENANCE:
-		player.cp = 95
+		PLAYER 2 Dreadnaught 3 maint cost: 3
+		PLAYER 2 Dreadnaught 4 maint cost: 3
+		PLAYER 2 Dreadnaught 5 maint cost: 3
+		total_maint_cost = 9
 
-		total_maint_cost = 0
-
-		player.cp after maintenance: 95 
+		player.cp after maintenance: 12 
 
 		PURCHASES:
-		PLAYER 2 BOUGHT A Scout
 
-		PLAYER HAS 89 LEFTOVER
+		PLAYER HAS 12 LEFTOVER
 
 END OF TURN 6 ECONOMIC PHASE
 
-WINNER: PLAYER 1
+WINNER: PLAYER 2

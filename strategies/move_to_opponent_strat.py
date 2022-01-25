@@ -1,6 +1,7 @@
 import random, math, sys
 sys.path.append('')
 from ship_data import *
+import math
 
 class MoveToOpponent:
     def __init__(self):
@@ -43,9 +44,11 @@ class MoveToOpponent:
     def buy_ships(self, cp_budget):
 
         if self.turn == None:
-            return {'Scout': 3, 'BattleCruiser': 3}
-        else:
-            return {'Scout': 1}
+            return {'Dreadnaught': 4}
+        elif (self.turn % 2) == 0:
+            return {'Dreadnaught': 1}
+
+        return {}
 
         # all_ship_names = str(all_ship_infos_dict)[1:-1]
 

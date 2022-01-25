@@ -248,19 +248,17 @@ class Game:
         for player in self.players.values():
 
             self.logger.write(f'\n\t{player.player_id}:\n')
-            self.logger.write(f'\n\t\tCP: {player.cp}\n')
 
             # income
+            self.logger.write(f'\n\t\tINCOME:')
             player.cp += 10
+            self.logger.write(f'\n\t\t{player.cp = }\n')
 
             # maintenance
 
             self.logger.write(f'\n\t\tMAINTENANCE:')
-            self.logger.write(f'\n\t\t{player.cp = }\n')
 
             player_ships = sorted(player.ships, key=lambda x: x.maint_cost, reverse=True)
-
-            # total_maint_cost = sum([ship.maint_cost for ship in player_ships])
             
             total_maint_cost = 0
             for ship in player_ships:
@@ -276,7 +274,7 @@ class Game:
                 while player.cp < total_maint_cost:
                     ship_to_delete = player_ships.pop()
                     total_maint_cost -= ship_to_delete.maint_cost                   
-                    self.logger.write(f'\n\t\t{ship_to_delete.ship_id()} HAS BEEN REMOVED\n')
+                    self.logger.write(f'\n\t\t{ship_to_delete.ship_id()} HAS BEEN REMOVED')
                     self.remove_ship(ship_to_delete)
 
             self.logger.write(f'\n\t\tplayer.cp after maintenance: {player.cp} \n')
