@@ -15,17 +15,17 @@ from william import WilliamStrat
 # Cayden  v Anton  : 67-33
 # Cayden  v Charlie: 83-17
 
-# William v Justin : 37-60
+# William v Justin : 35-61-4
 # William v Anton  : 27-73
-# William v Charlie: 
+# William v Charlie: 40-60
 
-# Justin  v Anton  :
-# Justin  v Charlie:
+# Justin  v Anton  : 42-58
+# Justin  v Charlie: 73-22-5
 
-# Anton   v Charlie:
+# Anton   v Charlie: 71-29
 
-true_player_1 = 'William'
-true_player_2 = 'Justin'
+true_player_1 = 'Anton'
+true_player_2 = 'Charlie'
 
 winners_1 = {true_player_1: 0, true_player_2: 0, 'Tie': 0}
 winners_2 = {true_player_2: 0, true_player_1: 0, 'Tie': 0}
@@ -34,8 +34,8 @@ num_iterations = 100
 
 for _ in range(num_iterations//2):
 
-    strategies_1 = [WilliamStrat(), JustinStrat()]
-    strategies_2 = [JustinStrat(), WilliamStrat()]
+    strategies_1 = [AntonStrat(), MoveToOpponent()]
+    strategies_2 = [MoveToOpponent(), AntonStrat()]
 
     players_1 = [Player(strategy) for strategy in strategies_1]
     game_1 = Game(players_1)
